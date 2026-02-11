@@ -60,25 +60,37 @@
     </aside>
 
     <main class="pt-20">
-      <!-- Hero (gradient orbs + animated Twiin text like hellotwiin.com - light theme) -->
-      <section class="relative min-h-screen flex items-center justify-center px-5 sm:px-6 py-16 sm:py-20 overflow-hidden bg-white">
-        <!-- Gradient orbs background (subtle on light) -->
-        <div class="absolute inset-0 z-0 overflow-hidden bg-gradient-to-b from-gray-50 to-white" style="contain: strict; transform: translateZ(0);">
-          <div class="absolute inset-0 opacity-40" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--primary) / 0.2), transparent 65%);"></div>
-          <div class="absolute inset-0 z-[5]" style="filter: blur(80px); opacity: 0.5;">
-            <div class="absolute top-[40%] left-[35%] w-[45vmin] h-[45vmin] rounded-[40%_60%_55%_45%_/_55%_40%_60%_45%]" style="background: radial-gradient(at 35% 35%, rgb(255,170,51) 0%, rgb(249,140,31) 30%, transparent 70%); opacity: 0.35;"></div>
-            <div class="absolute top-[50%] left-[55%] w-[45vmin] h-[45vmin] rounded-[55%_45%_60%_40%_/_40%_55%_45%_60%]" style="background: radial-gradient(at 65% 65%, rgb(91,43,238) 0%, rgb(110,26,230) 30%, transparent 70%); opacity: 0.35;"></div>
-            <div class="absolute top-[45%] left-[68%] w-[50vmin] h-[50vmin] rounded-[40%_60%_55%_45%_/_55%_40%_60%_45%]" style="background: radial-gradient(at 60% 40%, rgb(52,113,244) 0%, rgb(43,59,238) 30%, transparent 70%); opacity: 0.3;"></div>
-            <div class="absolute top-[48%] left-[28%] w-[38vmin] h-[38vmin] rounded-[55%_45%_60%_40%_/_40%_55%_45%_60%]" style="background: radial-gradient(at 55% 45%, rgb(228,68,121) 0%, rgb(218,47,161) 30%, transparent 70%); opacity: 0.3;"></div>
+      <!-- Hero (gradient orbs + animated Twiin text like hellotwiin.com) -->
+      <section class="hero-section relative min-h-screen flex items-center justify-center px-5 sm:px-6 py-16 sm:py-20 overflow-hidden">
+        <div class="absolute inset-0 z-0 overflow-hidden bg-background" style="contain: strict; transform: translateZ(0);">
+          <div class="absolute inset-0 bg-gradient-to-b from-background/[0.51] via-background/[0.41] to-background/[0.54] md:from-background/60 md:via-background/48 md:to-background/64 z-10"></div>
+          <div class="absolute inset-0 opacity-[0.54]" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--primary) / 0.35), transparent 65%);"></div>
+          <!-- Animated orb groups (JS updates transform) -->
+          <div class="absolute inset-0 hero-orbs-container" style="z-index: 5; filter: blur(60px); opacity: 0.9;">
+            <div class="hero-orb-group absolute top-0 left-0" style="contain: size layout style; will-change: transform;">
+              <div class="hero-orb absolute" style="width: 45vmin; height: 45vmin; background: radial-gradient(at 35% 35%, rgb(255,170,51) 0%, rgb(249,140,31) 30%, rgb(242,108,13) 50%, transparent 70%); opacity: 1; border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%; will-change: transform; backface-visibility: hidden;"></div>
+              <div class="hero-orb absolute" style="width: 45vmin; height: 45vmin; background: radial-gradient(at 65% 65%, rgb(91,43,238) 0%, rgb(110,26,230) 30%, rgb(129,29,201) 50%, transparent 70%); opacity: 1; border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; will-change: transform; backface-visibility: hidden;"></div>
+            </div>
+            <div class="hero-orb-group absolute top-0 left-0" style="contain: size layout style; will-change: transform;">
+              <div class="hero-orb absolute" style="width: 50vmin; height: 50vmin; background: radial-gradient(at 60% 40%, rgb(52,113,244) 0%, rgb(43,59,238) 30%, rgb(67,35,231) 50%, transparent 70%); opacity: 1; border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%; will-change: transform; backface-visibility: hidden;"></div>
+              <div class="hero-orb absolute" style="width: 50vmin; height: 50vmin; background: radial-gradient(at 40% 60%, rgb(228,68,121) 0%, rgb(218,47,161) 30%, rgb(202,43,202) 50%, transparent 70%); opacity: 1; border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; will-change: transform; backface-visibility: hidden;"></div>
+            </div>
+            <div class="hero-orb-group absolute top-0 left-0" style="contain: size layout style; will-change: transform;">
+              <div class="hero-orb absolute" style="width: 38vmin; height: 38vmin; background: radial-gradient(at 45% 55%, rgb(161,47,218) 0%, rgb(108,43,238) 30%, rgb(175,43,202) 50%, transparent 70%); opacity: 1; border-radius: 40% 60% 55% 45% / 55% 40% 60% 45%; will-change: transform; backface-visibility: hidden;"></div>
+              <div class="hero-orb absolute" style="width: 38vmin; height: 38vmin; background: radial-gradient(at 55% 45%, rgb(250,143,66) 0%, rgb(244,164,52) 30%, rgb(238,91,43) 50%, transparent 70%); opacity: 1; border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; will-change: transform; backface-visibility: hidden;"></div>
+            </div>
           </div>
+          <div class="absolute inset-0 pointer-events-none" style="filter: blur(60px); background: radial-gradient(circle at 30% 60%, rgb(157,38,217) 0%, transparent 50%); opacity: 0.36;"></div>
         </div>
-        <div class="max-w-5xl mx-auto text-center relative z-10 px-4">
-          <h1 class="hero-title text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight">Trained by you. To work for you.</h1>
-          <div class="flex justify-center items-center w-full -mt-8 sm:-mt-12 md:-mt-16">
-            <span class="hero-gradient-text font-black tracking-[-0.02em] inline-block align-middle text-[5rem] sm:text-[8rem] md:text-[12rem] lg:text-[14rem] xl:text-[16rem] relative z-20 opacity-95">Twiin</span>
+        <div class="max-w-5xl mx-auto text-center relative z-10 px-4 -mt-16 sm:mt-0">
+          <div class="flex flex-col items-center">
+            <h1 class="hero-title text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground tracking-tight">Trained by you. To work for you.</h1>
+            <div class="flex justify-center items-center w-full -mt-8 sm:-mt-12 md:-mt-16">
+              <span class="hero-gradient-text font-black tracking-[-0.02em] inline-block align-middle text-[7rem] sm:text-[10.5rem] md:text-[14rem] lg:text-[16.4rem] xl:text-[18.7rem] relative z-20 opacity-[0.85]">Twiin</span>
+            </div>
           </div>
           <div class="hero-cta relative z-30 mt-8 sm:mt-10">
-            <a href="#" class="inline-flex items-center justify-center gap-2 rounded-full h-12 px-8 py-5 text-base font-medium text-white border border-transparent shadow-[0_2px_10px_-2px_rgba(0,0,0,0.15)] transition-all duration-300 ease-out bg-gradient-to-br from-amber-500 via-violet-500 to-blue-500 hover:shadow-[0_4px_16px_-4px_rgba(0,0,0,0.2)] hover:scale-[1.02] active:scale-[0.98]">Get Started</a>
+            <a href="#" class="inline-flex items-center justify-center gap-2 rounded-full h-12 px-8 py-5 text-base font-medium text-white border border-white/20 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-out bg-gradient-to-br from-[hsla(31,97%,56%,0.37)] via-[hsla(280,60%,55%,0.37)] to-[hsla(250,70%,55%,0.37)] hover:from-[hsla(31,97%,56%,0.47)] hover:via-[hsla(280,60%,55%,0.47)] hover:to-[hsla(250,70%,55%,0.47)] hover:border-white/30 hover:shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] hover:scale-[1.02] active:scale-[0.98]">Get Started</a>
           </div>
         </div>
       </section>
