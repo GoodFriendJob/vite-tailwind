@@ -90,6 +90,25 @@
   color: transparent;
 }
 
+/* Ask away: bubble pill (position set on wrapper) */
+.ask-bubble-pill {
+  padding: 0.625rem 1rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0.95;
+  transition: all 0.3s ease-out;
+  cursor: default;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 6px 24px, rgba(255, 255, 255, 0.4) 0 1px 0 inset;
+}
+.ask-bubble-pill:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
 /* Scrollbar hide for carousel */
 .scrollbar-hide {
   -ms-overflow-style: none;

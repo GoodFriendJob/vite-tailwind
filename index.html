@@ -80,7 +80,7 @@
               <div class="hero-orb absolute" style="width: 38vmin; height: 38vmin; background: radial-gradient(at 55% 45%, rgb(250,143,66) 0%, rgb(244,164,52) 30%, rgb(238,91,43) 50%, transparent 70%); opacity: 1; border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; will-change: transform; backface-visibility: hidden;"></div>
             </div>
           </div>
-          <div class="absolute inset-0 pointer-events-none" style="filter: blur(60px); background: radial-gradient(circle at 30% 60%, rgb(157,38,217) 0%, transparent 50%); opacity: 0.36;"></div>
+          <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(circle at 30% 60%, rgb(157, 38, 217) 0%, transparent 50%);opacity: 0.36;"></div>
         </div>
         <div class="max-w-5xl mx-auto text-center relative z-10 px-4 -mt-16 sm:mt-0">
           <div class="flex flex-col items-center">
@@ -103,7 +103,7 @@
             <p class="text-gray-600 text-[1.0625rem] sm:text-xl md:text-2xl max-w-xl mx-auto">Trained on your world.<br class="sm:hidden"> Tailored to your goals.</p>
           </div>
         </div>
-        <div class="relative w-full pt-6 px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="relative w-full mt-6 pt-6 px-4 sm:px-6 md:px-8 lg:px-12">
           <div class="w-full overflow-hidden" role="region" aria-roledescription="carousel">
             <div class="overflow-visible px-4 sm:px-6 -mx-4 sm:-mx-6 py-16 -my-16">
                 <div class="flex -ml-2 md:-ml-3 transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] cursor-grab touch-pan-y" id="use-cases-track">
@@ -204,31 +204,71 @@
           </div>
       </section>
 
-      <!-- Ask away: gradient bg + floating bubbles (hellotwiin.com style) -->
-      <section class="relative w-full min-h-[700px] md:min-h-[900px] overflow-hidden flex items-center justify-center py-24" style="background: linear-gradient(rgb(253,186,116) 0%, rgb(245,208,254) 35%, rgb(216,180,254) 65%, rgb(147,197,253) 100%);">
-        <h2 class="absolute z-30 text-[3.25rem] md:text-[5.5rem] font-bold text-gray-900 tracking-[-0.03em] leading-[1.05] pointer-events-none">Ask away.</h2>
-        <div class="absolute inset-0 z-10 flex flex-wrap items-center justify-center gap-4 md:gap-6 p-8 pt-32 md:pt-40">
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 ease-out cursor-default select-none hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🌾 organic ingredients?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥛 Do you have oat milk?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍞 Any gluten free options?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥐 open for brunch?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">☕ Coffee roasters?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍲 Soup of the day?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">📖 Our Story</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🧰 First-Aid kit?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍹 Mocktail menu?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍺 Wheat Beer?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍣 Sushi specials?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">♿ Wheelchair accessible?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥜 Nut-free options?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🌿 Farm-to-table?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥗 Salad bar?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🌶 spicy recommendations?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">👩‍💻 Wi-Fi password?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍔 Signature burger?</span>
-          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🐶 patio pet friendly?</span>
+      <!-- Ask away: gradient bg + positioned bubbles (hellotwiin.com style) -->
+      <section id="ask-away" class="relative w-full h-[700px] md:h-[1100px] overflow-hidden" style="background: linear-gradient(rgb(253,186,116) 0%, rgb(245,208,254) 35%, rgb(216,180,254) 65%, rgb(147,197,253) 100%);">
+        <div class="absolute inset-0 flex items-center justify-center z-30 pointer-events-none">
+          <h2 class="text-[3.25rem] md:text-[5.5rem] font-bold text-gray-900 tracking-[-0.03em] leading-[1.05]">Ask away.</h2>
         </div>
-        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none z-20"></div>
+        <div class="absolute inset-0 z-10 pointer-events-none">
+          <div class="absolute pointer-events-auto" style="left: 68%; top: 45%; transform: translate(-50%, -50%) scale(0.85);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🌾 organic ingredients?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 22%; top: 55%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🥛 Do you have oat milk?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 45%; top: 60%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🍞 Any gluten free options?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 3%; top: 40%; transform: translate(-50%, -50%) scale(0.85);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🥐 open for brunch?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 28%; top: 80%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">☕ Coffee roasters?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 58%; top: 70%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🍲 Soup of the day?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 18%; top: 48%; transform: translate(-50%, -50%) scale(0.75);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">📖 Our Story</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 35%; top: 35%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🧰 First-Aid kit?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 92%; top: 70%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🍹 Mocktail menu?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 78%; top: 52%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🍺 Wheat Beer?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 72%; top: 95%; transform: translate(-50%, -50%) scale(0.85);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🍣 Sushi specials?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 5%; top: 90%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">♿ Wheelchair accessible?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 48%; top: 38%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🥜 Nut-free options?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 22%; top: 72%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🌿 Farm-to-table?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 62%; top: 55%; transform: translate(-50%, -50%) scale(0.8);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🥗 Salad bar?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 5%; top: 55%; transform: translate(-50%, -50%) scale(0.9);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🌶 spicy recommendations?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 88%; top: 65%; transform: translate(-50%, -50%) scale(0.9);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">👩‍💻 Wi-Fi password?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 75%; top: 90%; transform: translate(-50%, -50%) scale(0.9);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🍔 Signature burger?</span></div>
+          </div>
+          <div class="absolute pointer-events-auto" style="left: 12%; top: 60%; transform: translate(-50%, -50%) scale(1.1);">
+            <div class="ask-bubble-pill"><span class="text-gray-800 text-sm md:text-base font-medium whitespace-nowrap">🐶 patio pet friendly?</span></div>
+          </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none z-50"></div>
       </section>
 
       <!-- Pricing (gradient CTA like hellotwiin.com) -->
