@@ -66,8 +66,8 @@ function initUseCaseCarousel() {
       dot.classList.toggle("!w-8", isActive);
       dot.classList.toggle("!h-2", isActive);
       dot.classList.toggle("!w-2", !isActive);
-      dot.classList.toggle("bg-white", isActive);
-      dot.classList.toggle("bg-white/40", !isActive);
+      dot.classList.toggle("bg-gray-900", isActive);
+      dot.classList.toggle("bg-gray-300", !isActive);
     });
   }
 

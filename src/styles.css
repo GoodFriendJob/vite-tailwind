@@ -12,11 +12,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---- Twiin design tokens (from hellotwiin.com) ---- */
+/* ---- Twiin design tokens (hellotwiin.com: white bg, black text primary) ---- */
 :root {
-  --background: 0 0% 3%;
-  --foreground: 0 0% 98%;
-  --border: 0 0% 20%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+  --border: 0 0% 90%;
   --primary: 263 70% 58%;
   --ring: 263 70% 58%;
   --twiin-pink: 330 80% 60%;
@@ -24,8 +24,8 @@
   --twiin-blue: 217 90% 60%;
   --twiin-magenta: 295 70% 55%;
   --twiin-orange: 31 97% 56%;
-  --muted: 0 0% 45%;
-  --muted-foreground: 0 0% 65%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
   --accent: 263 70% 58%;
 }
 
