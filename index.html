@@ -337,16 +337,28 @@
         <p class="absolute bottom-4 left-0 right-0 text-[9px] sm:text-[10px] text-gray-500 text-center">$0.60/day based on $19.99/mo subscription. Prices subject to change.</p>
       </section>
 
-      <!-- Only one you + phone mockup -->
-      <section class="border-t border-gray-200 py-24 bg-white">
-        <div class="mx-auto max-w-6xl px-6">
-          <h2 class="section-title text-center text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">Only one you.<br />Until now.</h2>
-          <div class="mt-16 flex flex-col items-center justify-center gap-12 lg:flex-row">
-            <div class="flex-1">
-              <img src="/assets/img/phone-mockup-zero-state-B60yn-kr.png" alt="Twiin app" class="mx-auto max-h-[520px] w-auto object-contain" />
+      <!-- Philosophy: Only one you. Until now. (scroll-driven 3D phones like hellotwiin.com) -->
+      <section id="philosophy" class="py-20 sm:py-24 px-5 sm:px-6 bg-background border-t border-gray-200">
+        <div class="max-w-6xl mx-auto space-y-12 sm:space-y-16">
+          <h2 class="section-title text-[3.25rem] leading-[1.1] sm:text-[3.9rem] md:text-7xl lg:text-9xl font-bold text-center tracking-[-0.03em] px-2 sm:px-0 overflow-visible">
+            <span class="inline-block pb-[0.15em] -mb-[0.15em] text-foreground">Only one you.</span><br>
+            <span class="inline-block pb-[0.15em] -mb-[0.15em] text-gradient-purple">Until now.</span>
+          </h2>
+          <div class="philosophy-phones-wrapper relative h-[650px] flex items-center justify-center" style="contain: layout; transform-style: preserve-3d; perspective: 1000px;">
+            <div class="philosophy-phone absolute left-1/2 top-1/2 will-change-transform" style="backface-visibility: hidden;">
+              <div class="relative w-[300px] aspect-[9/19.5] rounded-[3rem] overflow-hidden shadow-lg md:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.4),0_20px_60px_-10px_rgba(0,0,0,0.3)]" style="contain: layout paint;">
+                <img src="/assets/img/phone-mockup-zero-state-B60yn-kr.png" alt="Twiin app – get started" class="w-full h-full object-cover" />
+              </div>
             </div>
-            <div class="flex-1">
-              <img src="/assets/img/phone-mockup-chat-state-BN-AsfwH.png" alt="Twiin chat" class="mx-auto max-h-[520px] w-auto object-contain" />
+            <div class="philosophy-phone absolute left-1/2 top-1/2 will-change-transform" style="backface-visibility: hidden;">
+              <div class="relative w-[300px] aspect-[9/19.5] rounded-[3rem] overflow-hidden shadow-lg md:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.4),0_20px_60px_-10px_rgba(0,0,0,0.3)]" style="contain: layout paint;">
+                <img src="/assets/img/phone-mockup-chat-state-BN-AsfwH.png" alt="Twiin chat" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="philosophy-phone absolute left-1/2 top-1/2 will-change-transform" style="backface-visibility: hidden;">
+              <div class="relative w-[300px] aspect-[9/19.5] rounded-[3rem] overflow-hidden shadow-lg md:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.4),0_20px_60px_-10px_rgba(0,0,0,0.3)]" style="contain: layout paint;">
+                <img src="/assets/img/phone-mockup-zero-state-B60yn-kr.png" alt="Twiin app" class="w-full h-full object-cover" />
+              </div>
             </div>
           </div>
         </div>

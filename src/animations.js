@@ -87,4 +87,38 @@ export function initAnimations() {
       ease: "power3.out",
     });
   });
+
+  // Philosophy section: scroll-driven 3D phone carousel (transform/appear on scroll)
+  initPhilosophyPhones();
+}
+
+function initPhilosophyPhones() {
+  const section = document.getElementById("philosophy");
+  const wrapper = section?.querySelector(".philosophy-phones-wrapper");
+  const phones = section?.querySelectorAll(".philosophy-phone");
+  if (!wrapper || !phones?.length) return;
+
+  const PHONE_WIDTH_PCT = 13.44;
+  const setPhoneTransforms = (progress) => {
+    const centerIndex = progress * 2;
+    phones.forEach((el, i) => {
+      const offset = i - centerIndex;
+      const x = offset * PHONE_WIDTH_PCT;
+      const z = offset === 0 ? 10 : offset < 0 ? -20 : -10;
+      const scale = offset === 0 ? 1 : 0.894;
+      const opacity = offset === 0 ? 1 : 0.38;
+      el.style.transform = `translate(-50%, -50%) translate3d(${x}%, 0px, ${z}px) scale(${scale})`;
+      el.style.opacity = String(opacity);
+    });
+  };
+
+  setPhoneTransforms(0);
+
+  ScrollTrigger.create({
+    trigger: wrapper,
+    start: "top center",
+    end: "bottom center",
+    scrub: true,
+    onUpdate: (self) => setPhoneTransforms(self.progress),
+  });
 }
