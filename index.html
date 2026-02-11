@@ -4,131 +4,233 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twiin - Your Smarter Self</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+    <!-- Material Symbols (same icons as Material UI) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
   <body class="bg-black text-white antialiased">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" class="text-xl font-semibold tracking-tight">Twiin</a>
-        <a href="#" class="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-white/90">Get Started</a>
+    <!-- Top nav (migrated from hellotwiin.com) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/20 bg-black/80 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" style="transform: translateZ(0);">
+      <div class="w-full px-6 py-4 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+        <div class="flex items-center justify-between">
+          <a href="#" class="flex-shrink-0 text-2xl font-bold text-white transition-all duration-300 hover:scale-105 hover:text-primary active:scale-95">Twiin</a>
+          <div class="hidden md:flex md:items-center">
+            <div class="flex items-center gap-6 lg:gap-8">
+              <a href="#possibilities" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">Possibilities</a>
+              <a href="#why" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">Why Twiin?</a>
+              <a href="#how" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">How It Works</a>
+              <a href="#at-work" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">At Work</a>
+              <a href="#impact" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">Impact</a>
+              <a href="#products" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">Products</a>
+              <a href="#answers" class="nav-link relative inline-block text-xs font-medium text-white after:absolute after:bottom-[-4px] after:left-0 after:block after:h-[2px] after:w-0 after:bg-primary after:content-[''] after:transition-all after:duration-500 after:ease-[cubic-bezier(0.16,1,0.3,1)] hover:text-primary hover:after:w-full active:scale-95 transition-transform duration-300">Answers</a>
+            </div>
+            <div class="ml-6 flex items-center gap-3 lg:ml-10">
+              <a href="#" class="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-white/30 px-5 py-2 text-sm font-medium tracking-tight text-white/70 transition-all duration-300 ease-out hover:scale-[1.02] hover:border-white/40 hover:bg-white/10 hover:text-white hover:shadow-[inset_0_1px_2px_hsla(0,0%,100%,0.1),0_4px_12px_-4px_hsla(0,0%,0%,0.2),0_0_16px_2px_hsla(0,0%,100%,0.06)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">Log In</a>
+              <a href="#" class="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-white/30 bg-transparent px-5 py-2 text-sm font-medium tracking-tight text-white/90 shadow-none transition-all duration-200 ease-out hover:border-white/50 hover:bg-white/10 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black">Get Started</a>
+            </div>
+          </div>
+          <button type="button" id="mobile-menu-btn" class="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-white/80 transition-all duration-300 ease-out hover:scale-[1.02] hover:bg-white/10 hover:text-white hover:shadow-[inset_0_1px_2px_hsla(0,0%,100%,0.1),0_4px_12px_-4px_hsla(0,0%,0%,0.2),0_0_16px_2px_hsla(0,0%,100%,0.06)] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu-drawer">
+            <span class="material-symbols-outlined text-[24px]" aria-hidden="true">menu</span>
+          </button>
+        </div>
       </div>
-    </header>
+    </nav>
 
-    <main>
-      <!-- Hero -->
-      <section class="relative min-h-screen pt-32 pb-24 md:pt-40">
-        <div class="mx-auto max-w-4xl px-6 text-center">
-          <h1 class="hero-title text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-            Trained by you.<br />To work for you.
-          </h1>
-          <p class="hero-subtitle mt-6 text-2xl font-medium text-white/80 md:text-3xl">Intelligence.Multiplied.</p>
-          <p class="mt-4 text-lg text-white/60">Trained on your world. Tailored to your goals.</p>
-          <a href="#" class="mt-10 inline-block rounded-full bg-white px-8 py-4 text-base font-medium text-black transition hover:bg-white/90">Get Started</a>
+    <!-- Mobile menu: overlay + slide-in panel from left (hidden on md+) -->
+    <div id="mobile-menu-backdrop" class="mobile-menu-backdrop fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+    <aside id="mobile-menu-drawer" class="mobile-menu-drawer fixed top-0 left-0 z-[70] h-full w-[280px] max-w-[85vw] bg-zinc-900 border-r border-white/20 shadow-2xl transition-[transform] duration-300 ease-out md:hidden" aria-label="Mobile menu" aria-hidden="true">
+      <div class="flex flex-col h-full pt-16 pb-8 px-5 overflow-y-auto">
+        <button type="button" id="mobile-menu-close" class="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:bg-white/10 hover:text-white transition-colors" aria-label="Close menu">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+        <nav class="flex flex-col gap-0 pt-2">
+          <a href="#use-cases" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors rounded-none">Possibilities</a>
+          <a href="#why" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors">Why Twiin?</a>
+          <a href="#how" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors">How It Works</a>
+          <a href="#at-work" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors">At Work</a>
+          <a href="#impact" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors">Impact</a>
+          <a href="#products" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors">Products</a>
+          <a href="#answers" class="mobile-nav-link block py-3.5 text-base font-medium text-white border-b border-white/10 hover:text-primary hover:bg-white/5 transition-colors">Answers</a>
+        </nav>
+        <div class="mt-6 flex flex-col gap-3">
+          <a href="#" class="mobile-nav-link inline-flex h-11 items-center justify-center rounded-full border border-white/30 px-5 text-sm font-medium text-white/90 hover:bg-white/10 hover:border-white/50 transition-colors">Log In</a>
+          <a href="#" class="mobile-nav-link inline-flex h-11 items-center justify-center rounded-full border border-white/30 bg-white/10 px-5 text-sm font-medium text-white hover:bg-white/20 transition-colors">Get Started</a>
         </div>
-      </section>
+      </div>
+    </aside>
 
-      <!-- Use cases -->
-      <section class="border-t border-white/10 py-24">
-        <div class="mx-auto max-w-6xl px-6">
-          <h2 class="section-title text-center text-3xl font-bold tracking-tight md:text-4xl">Intelligence.Multiplied.</h2>
-          <p class="mt-3 text-center text-white/70">Trained on your world. Tailored to your goals.</p>
-
-          <div class="mt-16 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-            <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src="/assets/img/use-case-cafe-coffee-shop-B1AHZlM6.jpg" alt="Restaurants & Coffee Shops" class="h-full w-full object-cover transition group-hover:scale-105" />
-              </div>
-              <div class="p-6">
-                <span class="text-sm font-medium text-white/50">Restaurants & Coffee Shops</span>
-                <h3 class="mt-2 text-xl font-semibold">Answers. Served hot.</h3>
-                <p class="mt-2 text-white/70">Sauce secrets. Bean origins. WiFi. Dietary needs. Twiin answers the routine questions instantly—so your staff can keep the kitchen moving and the tables happy.</p>
-              </div>
-            </article>
-            <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src="/assets/img/use-case-mentor-new-CUwQ-Fcq.L2Fzc2V0cy.png" alt="Teachers & Tutors" class="h-full w-full object-cover transition group-hover:scale-105" />
-              </div>
-              <div class="p-6">
-                <span class="text-sm font-medium text-white/50">Teachers & Tutors</span>
-                <h3 class="mt-2 text-xl font-semibold">Your knowledge. Multiplied.</h3>
-                <p class="mt-2 text-white/70">Twiin learns from you, then teaches for you. Whether supporting students or guiding clients, your unique knowledge is available 24/7. Scale your impact without burning out.</p>
-              </div>
-            </article>
-            <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src="/assets/img/use-case-host-BS6F0_qI.jpg" alt="Airbnb & Rentals" class="h-full w-full object-cover transition group-hover:scale-105" />
-              </div>
-              <div class="p-6">
-                <span class="text-sm font-medium text-white/50">Airbnb & Rentals</span>
-                <h3 class="mt-2 text-xl font-semibold">Superhost. On autopilot.</h3>
-                <p class="mt-2 text-white/70">No missed messages. No 11 p.m. wake-up calls. Your Twiin handles check-ins, Wi-Fi passwords, and dining tips instantly. Be the perfect host, even when you're asleep.</p>
-              </div>
-            </article>
-            <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src="/assets/img/use-case-coaching-DctIJi8I.jpg" alt="Coaching & Mentoring" class="h-full w-full object-cover transition group-hover:scale-105" />
-              </div>
-              <div class="p-6">
-                <span class="text-sm font-medium text-white/50">Coaching & Mentoring</span>
-                <h3 class="mt-2 text-xl font-semibold">Guidance. Without boundaries.</h3>
-                <p class="mt-2 text-white/70">From strategy questions to mindset shifts. Your Twiin delivers your coaching philosophy and personalized insights—helping clients grow even between sessions.</p>
-              </div>
-            </article>
-            <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:border-white/20">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img src="/assets/img/use-case-hotel-modern-r8Y-byxy.jpg" alt="Hotels" class="h-full w-full object-cover transition group-hover:scale-105" />
-              </div>
-              <div class="p-6">
-                <span class="text-sm font-medium text-white/50">Hotels</span>
-                <h3 class="mt-2 text-xl font-semibold">Concierge. Reimagined.</h3>
-                <p class="mt-2 text-white/70">Late checkouts. Pool hours. Hidden gems. Twiin handles the requests instantly with the warmth of your best staff. No hold music. No wait. Just pure hospitality.</p>
-              </div>
-            </article>
+    <main class="pt-20">
+      <!-- Hero (gradient orbs + animated Twiin text like hellotwiin.com) -->
+      <section class="relative min-h-screen flex items-center justify-center px-5 sm:px-6 py-16 sm:py-20 overflow-hidden">
+        <!-- Gradient orbs background -->
+        <div class="absolute inset-0 z-0 overflow-hidden bg-black" style="contain: strict; transform: translateZ(0);">
+          <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50 md:from-black/60 md:via-black/48 md:to-black/64 z-10"></div>
+          <div class="absolute inset-0 opacity-50" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, hsl(var(--primary) / 0.35), transparent 65%);"></div>
+          <div class="absolute inset-0 z-[5]" style="filter: blur(60px); opacity: 0.9;">
+            <div class="absolute top-[40%] left-[35%] w-[45vmin] h-[45vmin] rounded-[40%_60%_55%_45%_/_55%_40%_60%_45%]" style="background: radial-gradient(at 35% 35%, rgb(255,170,51) 0%, rgb(249,140,31) 30%, rgb(242,108,13) 50%, transparent 70%); opacity: 0.6;"></div>
+            <div class="absolute top-[50%] left-[55%] w-[45vmin] h-[45vmin] rounded-[55%_45%_60%_40%_/_40%_55%_45%_60%]" style="background: radial-gradient(at 65% 65%, rgb(91,43,238) 0%, rgb(110,26,230) 30%, rgb(129,29,201) 50%, transparent 70%); opacity: 0.6;"></div>
+            <div class="absolute top-[45%] left-[68%] w-[50vmin] h-[50vmin] rounded-[40%_60%_55%_45%_/_55%_40%_60%_45%]" style="background: radial-gradient(at 60% 40%, rgb(52,113,244) 0%, rgb(43,59,238) 30%, rgb(67,35,231) 50%, transparent 70%); opacity: 0.5;"></div>
+            <div class="absolute top-[48%] left-[28%] w-[38vmin] h-[38vmin] rounded-[55%_45%_60%_40%_/_40%_55%_45%_60%]" style="background: radial-gradient(at 55% 45%, rgb(228,68,121) 0%, rgb(218,47,161) 30%, rgb(202,43,202) 50%, transparent 70%); opacity: 0.5;"></div>
+          </div>
+        </div>
+        <div class="max-w-5xl mx-auto text-center relative z-10 px-4">
+          <h1 class="hero-title text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white tracking-tight">Trained by you. To work for you.</h1>
+          <div class="flex justify-center items-center w-full -mt-8 sm:-mt-12 md:-mt-16">
+            <span class="hero-gradient-text font-black tracking-[-0.02em] inline-block align-middle text-[5rem] sm:text-[8rem] md:text-[12rem] lg:text-[14rem] xl:text-[16rem] relative z-20 opacity-90">Twiin</span>
+          </div>
+          <div class="hero-cta relative z-30 mt-8 sm:mt-10">
+            <a href="#" class="inline-flex items-center justify-center gap-2 rounded-full h-12 px-8 py-5 text-base font-medium text-white border border-white/20 shadow-[0_2px_10px_-2px_rgba(0,0,0,0.3)] transition-all duration-300 ease-out bg-gradient-to-br from-[hsla(31,97%,56%,0.37)] via-[hsla(280,60%,55%,0.37)] to-[hsla(250,70%,55%,0.37)] backdrop-blur-md hover:from-[hsla(31,97%,56%,0.47)] hover:via-[hsla(280,60%,55%,0.47)] hover:to-[hsla(250,70%,55%,0.47)] hover:border-white/30 hover:shadow-[0_4px_16px_-4px_rgba(0,0,0,0.4)] hover:scale-[1.02] active:scale-[0.98]">Get Started</a>
           </div>
         </div>
       </section>
 
-      <!-- Ask away -->
-      <section class="border-t border-white/10 py-24">
-        <div class="mx-auto max-w-6xl px-6">
-          <h2 class="section-title text-center text-3xl font-bold tracking-tight md:text-4xl">Ask away.</h2>
-          <div class="mt-12 flex flex-wrap justify-center gap-3">
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🌾 organic ingredients?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🥛 Do you have oat milk?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍞 Any gluten free options?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🥐 open for brunch?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">☕ Coffee roasters?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍲 Soup of the day?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">📖 Our Story</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🧰 Where is the First-Aid kit?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍹 Mocktail menu?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍺 Do you have Wheat Beer?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍣 Sushi specials?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">♿ Wheelchair accessible?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🥜 Nut-free options?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🌿 Farm-to-table menu?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🥗 Salad bar available?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🌶 spicy food recommendations?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🥦 any vegetarian appetizers?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">👩‍💻 What's the Wi-Fi password?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍔 Signature burger?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">📅 Are reservations required?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍰 Any vegan desserts?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🎉 Private events?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🍕 🍺 best beer for margherita pizza?</span>
-            <span class="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm">🐶 is your patio pet friendly?</span>
+      <!-- Use cases: full-width section + infinite auto carousel (like hellotwiin.com) -->
+      <section id="use-cases" class="section-title py-16 md:py-20 bg-zinc-900/50 overflow-hidden w-full">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center space-y-4 max-w-3xl mx-auto">
+            <h2 class="text-[3.25rem] leading-[1.1] sm:text-[3.9rem] md:text-7xl lg:text-8xl font-bold tracking-[-0.03em] px-2"><span class="text-gradient-purple block">Intelligence.</span><span class="block text-white">Multiplied.</span></h2>
+            <p class="text-white/60 text-[1.0625rem] sm:text-xl md:text-2xl max-w-xl mx-auto">Trained on your world.<br class="sm:hidden"> Tailored to your goals.</p>
           </div>
         </div>
+        <div class="relative w-full pt-6 px-4 sm:px-6 md:px-8 lg:px-12">
+          <div class="w-full overflow-hidden" role="region" aria-roledescription="carousel">
+            <div class="overflow-visible px-4 sm:px-6 -mx-4 sm:-mx-6 py-16 -my-16">
+                <div class="flex -ml-2 md:-ml-3 transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] cursor-grab touch-pan-y" id="use-cases-track">
+                  <!-- 5 slides + 5 clones for infinite loop (10 total) -->
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide">
+                    <div class="relative h-full p-1.5 md:p-2">
+                      <div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full">
+                        <img src="/assets/img/use-case-cafe-coffee-shop-B1AHZlM6.jpg" alt="Restaurants & Coffee Shops" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] scale-105 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-all duration-700"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                          <div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100">
+                            <span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Restaurants & Coffee Shops</span>
+                            <h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Answers.<br>Served hot.</h3>
+                            <div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">Sauce secrets. Bean origins. WiFi. Dietary needs. Twiin answers the routine questions instantly—so your staff can keep the kitchen moving and the tables happy.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide">
+                    <div class="relative h-full p-1.5 md:p-2">
+                      <div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full">
+                        <img src="/assets/img/use-case-mentor-new-CUwQ-Fcq.L2Fzc2V0cy.png" alt="Teachers & Tutors" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                          <div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100">
+                            <span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Teachers & Tutors</span>
+                            <h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Your knowledge.<br>Multiplied.</h3>
+                            <div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">Twiin learns from you, then teaches for you. Whether supporting students or guiding clients, your unique knowledge is available 24/7.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide">
+                    <div class="relative h-full p-1.5 md:p-2">
+                      <div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full">
+                        <img src="/assets/img/use-case-host-BS6F0_qI.jpg" alt="Airbnb & Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                          <div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100">
+                            <span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Airbnb & Rentals</span>
+                            <h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Superhost.<br>On autopilot.</h3>
+                            <div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">No missed messages. No 11 p.m. wake-up calls. Your Twiin handles check-ins, Wi-Fi passwords, and dining tips instantly.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide">
+                    <div class="relative h-full p-1.5 md:p-2">
+                      <div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full">
+                        <img src="/assets/img/use-case-coaching-DctIJi8I.jpg" alt="Coaching & Mentoring" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                          <div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100">
+                            <span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Coaching & Mentoring</span>
+                            <h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Guidance.<br>Without boundaries.</h3>
+                            <div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">From strategy questions to mindset shifts. Your Twiin delivers your coaching philosophy and personalized insights.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide">
+                    <div class="relative h-full p-1.5 md:p-2">
+                      <div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full">
+                        <img src="/assets/img/use-case-hotel-modern-r8Y-byxy.jpg" alt="Hotels" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6">
+                          <div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100">
+                            <span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Hotels</span>
+                            <h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Concierge.<br>Reimagined.</h3>
+                            <div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">Late checkouts. Pool hours. Hidden gems. Twiin handles the requests instantly with the warmth of your best staff.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                  <!-- Clones for infinite loop (slides 6–10 = same as 1–5) -->
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide"><div class="relative h-full p-1.5 md:p-2"><div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full"><img src="/assets/img/use-case-cafe-coffee-shop-B1AHZlM6.jpg" alt="Restaurants & Coffee Shops" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] scale-105 group-hover:scale-110" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-all duration-700"></div><div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6"><div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100"><span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Restaurants & Coffee Shops</span><h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Answers.<br>Served hot.</h3><div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">Sauce secrets. Bean origins. WiFi. Dietary needs. Twiin answers the routine questions instantly—so your staff can keep the kitchen moving and the tables happy.</p></div></div></div></div></div></article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide"><div class="relative h-full p-1.5 md:p-2"><div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full"><img src="/assets/img/use-case-mentor-new-CUwQ-Fcq.L2Fzc2V0cy.png" alt="Teachers & Tutors" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div><div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6"><div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100"><span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Teachers & Tutors</span><h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Your knowledge.<br>Multiplied.</h3><div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">Twiin learns from you, then teaches for you. Whether supporting students or guiding clients, your unique knowledge is available 24/7.</p></div></div></div></div></div></article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide"><div class="relative h-full p-1.5 md:p-2"><div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full"><img src="/assets/img/use-case-host-BS6F0_qI.jpg" alt="Airbnb & Rentals" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div><div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6"><div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100"><span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Airbnb & Rentals</span><h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Superhost.<br>On autopilot.</h3><div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">No missed messages. No 11 p.m. wake-up calls. Your Twiin handles check-ins, Wi-Fi passwords, and dining tips instantly.</p></div></div></div></div></div></article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide"><div class="relative h-full p-1.5 md:p-2"><div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full"><img src="/assets/img/use-case-coaching-DctIJi8I.jpg" alt="Coaching & Mentoring" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div><div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6"><div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100"><span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Coaching & Mentoring</span><h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Guidance.<br>Without boundaries.</h3><div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">From strategy questions to mindset shifts. Your Twiin delivers your coaching philosophy and personalized insights.</p></div></div></div></div></div></article>
+                  <article class="use-case-slide min-w-0 shrink-0 grow-0 basis-[58%] sm:basis-[42%] md:basis-[30%] lg:basis-[22%] pl-2 md:pl-3 group cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] shadow-md hover:shadow-xl rounded-2xl md:rounded-3xl overflow-hidden aspect-[3/4]" role="group" aria-roledescription="slide"><div class="relative h-full p-1.5 md:p-2"><div class="relative overflow-hidden rounded-2xl md:rounded-3xl h-full"><img src="/assets/img/use-case-hotel-modern-r8Y-byxy.jpg" alt="Hotels" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent group-hover:from-black/90 group-hover:via-black/40"></div><div class="absolute inset-0 flex flex-col justify-end p-4 md:p-6"><div class="mb-2 transition-all duration-500 ease-out opacity-80 group-hover:opacity-100"><span class="inline-block px-2.5 py-0.5 text-[10px] font-medium tracking-wider uppercase bg-white/15 backdrop-blur-md text-white rounded-full border border-white/20 mb-2">Hotels</span><h3 class="text-[1.75rem] md:text-[2rem] leading-[1.1] font-bold text-white mb-2 md:mb-3 tracking-[-0.02em] whitespace-pre-line">Concierge.<br>Reimagined.</h3><div class="overflow-hidden transition-all duration-500 ease-out opacity-0 max-h-0 translate-y-2 group-hover:opacity-100 group-hover:max-h-40 group-hover:translate-y-0"><p class="text-white/90 text-xs md:text-sm leading-relaxed">Late checkouts. Pool hours. Hidden gems. Twiin handles the requests instantly with the warmth of your best staff.</p></div></div></div></div></div></article>
+                </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-8 px-4">
+            <div class="bg-black/50 backdrop-blur-xl rounded-full px-4 py-2.5 flex items-center gap-2 border border-white/10" id="use-cases-dots">
+                <button type="button" class="carousel-dot relative p-1.5 transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-110 active:scale-95 rounded-full w-8 h-2 bg-white" aria-label="Go to slide 1" data-index="0"></button>
+                <button type="button" class="carousel-dot relative p-1.5 transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-110 active:scale-95 rounded-full w-2 h-2 bg-white/40" aria-label="Go to slide 2" data-index="1"></button>
+                <button type="button" class="carousel-dot relative p-1.5 transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-110 active:scale-95 rounded-full w-2 h-2 bg-white/40" aria-label="Go to slide 3" data-index="2"></button>
+                <button type="button" class="carousel-dot relative p-1.5 transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-110 active:scale-95 rounded-full w-2 h-2 bg-white/40" aria-label="Go to slide 4" data-index="3"></button>
+                <button type="button" class="carousel-dot relative p-1.5 transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-110 active:scale-95 rounded-full w-2 h-2 bg-white/40" aria-label="Go to slide 5" data-index="4"></button>
+              </div>
+            </div>
+          </div>
       </section>
 
-      <!-- Pricing -->
-      <section class="border-t border-white/10 py-24">
-        <div class="mx-auto max-w-2xl px-6 text-center">
-          <h2 class="section-title text-3xl font-bold tracking-tight md:text-4xl">Hire a Twiin for just $19 a month</h2>
-          <p class="mt-4 text-xl text-white/80">Ask my Twiin anything…</p>
-          <p class="mt-6 text-white/70">Traditional hiring is expensive. Twiin isn't. Meet a 24/7 expert on your business that answers exactly like you—instantly. Never sleeps, never calls in sick, and never misses a beat. Scale your support without scaling your payroll.</p>
-          <p class="mt-4 text-sm text-white/50">$0.60/day based on $19.99/mo subscription. Prices subject to change.</p>
-          <a href="#" class="mt-8 inline-block rounded-full bg-white px-8 py-4 text-base font-medium text-black transition hover:bg-white/90">Get Started</a>
+      <!-- Ask away: gradient bg + floating bubbles (hellotwiin.com style) -->
+      <section class="relative w-full min-h-[700px] md:min-h-[900px] overflow-hidden flex items-center justify-center py-24" style="background: linear-gradient(rgb(253,186,116) 0%, rgb(245,208,254) 35%, rgb(216,180,254) 65%, rgb(147,197,253) 100%);">
+        <h2 class="absolute z-30 text-[3.25rem] md:text-[5.5rem] font-bold text-gray-900 tracking-[-0.03em] leading-[1.05] pointer-events-none">Ask away.</h2>
+        <div class="absolute inset-0 z-10 flex flex-wrap items-center justify-center gap-4 md:gap-6 p-8 pt-32 md:pt-40">
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 ease-out cursor-default select-none hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🌾 organic ingredients?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥛 Do you have oat milk?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍞 Any gluten free options?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥐 open for brunch?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">☕ Coffee roasters?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍲 Soup of the day?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">📖 Our Story</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🧰 First-Aid kit?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍹 Mocktail menu?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍺 Wheat Beer?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍣 Sushi specials?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">♿ Wheelchair accessible?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥜 Nut-free options?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🌿 Farm-to-table?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🥗 Salad bar?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🌶 spicy recommendations?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">👩‍💻 Wi-Fi password?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🍔 Signature burger?</span>
+          <span class="ask-bubble px-4 py-2.5 rounded-full backdrop-blur-md border bg-white/30 border-white/40 text-gray-800 text-sm md:text-base font-medium shadow-[0_6px_24px_rgba(0,0,0,0.12),0_1px_0px_rgba(255,255,255,0.4)_inset] transition-all duration-300 hover:scale-110 hover:bg-white/40 hover:shadow-lg whitespace-nowrap">🐶 patio pet friendly?</span>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none z-20"></div>
+      </section>
+
+      <!-- Pricing (gradient CTA like hellotwiin.com) -->
+      <section class="border-t border-white/10 py-24 bg-black overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black pointer-events-none"></div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-8">
+          <div class="flex flex-col items-center text-center">
+            <h2 class="section-title text-[3.25rem] sm:text-[3.9rem] md:text-7xl lg:text-8xl font-bold tracking-[-0.03em] leading-[1.05]"><span class="text-gradient-purple block">Hire a Twiin</span><span class="block text-white mt-1">for just $19 a month</span></h2>
+            <p class="mt-6 text-xl text-white/80">Ask my Twiin anything…<span class="inline-block w-[2px] h-5 ml-0.5 bg-white align-middle animate-breathingCursor" style="animation: breathingCursor 1s ease-in-out infinite;"></span></p>
+            <p class="mt-8 text-white/70 max-w-3xl mx-auto">Traditional hiring is expensive. Twiin isn't. Meet a 24/7 expert on your business that answers exactly like you—instantly. <span class="font-medium bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">Scale your support without scaling your payroll.</span></p>
+            <p class="mt-4 text-sm text-gray-500">$0.60/day based on $19.99/mo subscription. Prices subject to change.</p>
+            <a href="#" class="mt-10 inline-flex items-center justify-center rounded-full h-12 px-8 py-5 text-base font-semibold text-white border border-white/20 bg-gradient-to-br from-[hsla(31,97%,56%,0.37)] via-[hsla(280,60%,55%,0.37)] to-[hsla(250,70%,55%,0.37)] backdrop-blur-md hover:from-[hsla(31,97%,56%,0.47)] hover:via-[hsla(280,60%,55%,0.47)] hover:to-[hsla(250,70%,55%,0.47)] hover:border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg hover:shadow-xl">Get Started</a>
+          </div>
         </div>
       </section>
 
@@ -171,49 +273,49 @@
         </div>
       </section>
 
-      <!-- Three pillars -->
+      <!-- Three pillars (hover scale like hellotwiin.com) -->
       <section class="border-t border-white/10 py-24">
         <div class="mx-auto max-w-6xl px-6">
           <div class="grid gap-12 md:grid-cols-3">
-            <div class="text-center">
-              <h3 class="text-xl font-semibold">Be everywhere.</h3>
-              <p class="mt-3 text-white/70">Physics says you can't be in two places at once. Twiin says you can be in a thousand. Scale your presence without splitting your focus.</p>
+            <div class="group text-center transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] cursor-default">
+              <h3 class="text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary">Be everywhere.</h3>
+              <p class="mt-3 text-white/70 transition-colors duration-300 group-hover:text-white/90">Physics says you can't be in two places at once. <span class="font-bold">Twiin</span> says you can be in a thousand. Scale your presence without splitting your focus.</p>
             </div>
-            <div class="text-center">
-              <h3 class="text-xl font-semibold">Always your best day.</h3>
-              <p class="mt-3 text-white/70">No burnout. No fatigue. Your Twiin delivers your expertise with the same patience, tone, and precision—every single time.</p>
+            <div class="group text-center transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] cursor-default">
+              <h3 class="text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary">Always your best day.</h3>
+              <p class="mt-3 text-white/70 transition-colors duration-300 group-hover:text-white/90">No burnout. No fatigue. Your <span class="font-bold">Twiin</span> delivers your expertise with the same patience, tone, and precision—every single time.</p>
             </div>
-            <div class="text-center">
-              <h3 class="text-xl font-semibold">Yours alone.</h3>
-              <p class="mt-3 text-white/70">Your knowledge, in one place. Fully encrypted. Never shared. Never used to train public models. A private memory built only from you, for you.</p>
+            <div class="group text-center transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] cursor-default">
+              <h3 class="text-xl font-bold text-white transition-colors duration-300 group-hover:text-primary">Yours alone.</h3>
+              <p class="mt-3 text-white/70 transition-colors duration-300 group-hover:text-white/90">Your knowledge, in one place. Fully encrypted. Never shared. Never used to train public models. A private memory built only from you, for you.</p>
             </div>
           </div>
           <div class="mt-16 text-center">
-            <a href="#" class="inline-block rounded-full bg-white px-8 py-4 text-base font-medium text-black transition hover:bg-white/90">Get Started</a>
+            <a href="#" class="inline-flex items-center justify-center rounded-full h-12 px-8 py-5 text-base font-semibold text-white border border-white/20 bg-gradient-to-br from-[hsla(31,97%,56%,0.37)] via-[hsla(280,60%,55%,0.37)] to-[hsla(250,70%,55%,0.37)] backdrop-blur-md hover:from-[hsla(31,97%,56%,0.47)] hover:via-[hsla(280,60%,55%,0.47)] hover:to-[hsla(250,70%,55%,0.47)] hover:border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">Get Started</a>
           </div>
         </div>
       </section>
 
-      <!-- Upload. Done. -->
-      <section class="border-t border-white/10 py-24">
+      <!-- Upload. Done. (glass cards + hover) -->
+      <section class="border-t border-white/10 py-24 bg-black">
         <div class="mx-auto max-w-4xl px-6 text-center">
-          <h2 class="section-title text-3xl font-bold tracking-tight md:text-4xl">Upload. Done.</h2>
-          <p class="mt-4 text-xl text-white/80">Intelligence. Drag and dropped.</p>
+          <h2 class="section-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-[-0.03em]" style="background: linear-gradient(90deg, rgb(250,137,56), rgb(157,140,242), rgb(109,162,248)); -webkit-background-clip: text; background-clip: text; color: transparent;">Upload. Done.</h2>
+          <p class="mt-4 text-xl sm:text-2xl text-white/70">Intelligence. Drag and dropped.</p>
           <div class="mt-12 flex flex-wrap justify-center gap-4">
-            <span class="rounded-xl border border-white/20 bg-white/5 px-6 py-3">Web</span>
-            <span class="rounded-xl border border-white/20 bg-white/5 px-6 py-3">Links</span>
-            <span class="rounded-xl border border-white/20 bg-white/5 px-6 py-3">Dictation</span>
-            <span class="rounded-xl border border-white/20 bg-white/5 px-6 py-3">Pictures</span>
-            <span class="rounded-xl border border-white/20 bg-white/5 px-6 py-3">Documents</span>
+            <span class="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 cursor-default">Web</span>
+            <span class="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 cursor-default">Links</span>
+            <span class="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 cursor-default">Dictation</span>
+            <span class="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 cursor-default">Pictures</span>
+            <span class="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:border-white/30 cursor-default">Documents</span>
           </div>
-          <p class="mt-8 text-white/70">No coding. No setup. Just drag and drop the files you already have. Twiin absorbs them instantly—getting sharper with every upload.</p>
+          <p class="mt-8 text-white/70 max-w-3xl mx-auto">No coding. No setup. Just drag and drop the files you already have. Twiin absorbs them instantly—getting sharper with every upload.</p>
         </div>
       </section>
 
       <!-- Footer CTA -->
       <footer class="border-t border-white/10 py-16">
         <div class="mx-auto max-w-4xl px-6 text-center">
-          <a href="#" class="inline-block rounded-full bg-white px-8 py-4 text-base font-medium text-black transition hover:bg-white/90">Get Started</a>
+          <a href="#" class="inline-flex items-center justify-center rounded-full h-12 px-8 py-5 text-base font-semibold text-white border border-white/20 bg-gradient-to-br from-[hsla(31,97%,56%,0.37)] via-[hsla(280,60%,55%,0.37)] to-[hsla(250,70%,55%,0.37)] backdrop-blur-md hover:from-[hsla(31,97%,56%,0.47)] hover:via-[hsla(280,60%,55%,0.47)] hover:to-[hsla(250,70%,55%,0.47)] hover:border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">Get Started</a>
           <p class="mt-6 text-sm text-white/50">© Twiin</p>
         </div>
       </footer>

@@ -1,1 +1,132 @@
 @import "tailwindcss";
+
+/* Material Symbols (same as Material UI icons) - base styles */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Twiin design tokens (from hellotwiin.com) ---- */
+:root {
+  --background: 0 0% 3%;
+  --foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --primary: 263 70% 58%;
+  --ring: 263 70% 58%;
+  --twiin-pink: 330 80% 60%;
+  --twiin-violet: 263 60% 55%;
+  --twiin-blue: 217 90% 60%;
+  --twiin-magenta: 295 70% 55%;
+  --twiin-orange: 31 97% 56%;
+  --muted: 0 0% 45%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 263 70% 58%;
+}
+
+/* ---- Keyframes from scraped site ---- */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes breathingCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes gradientRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes travelingGlow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-30%, -70%) scale(1.2); opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-breathingCursor {
+  animation: breathingCursor 1s ease-in-out infinite;
+}
+
+/* ---- Utility classes ---- */
+.text-gradient-purple {
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+  display: inline-block;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background: linear-gradient(90deg, rgb(251, 146, 60), rgb(192, 132, 252), rgb(59, 130, 246), rgb(251, 146, 60)) 0% 0% / 300% 100% text;
+  animation: 8.2s ease-in-out 0s infinite normal none running gradientShift;
+}
+
+.hero-gradient-text {
+  background-image: linear-gradient(90deg, rgb(251, 146, 60), rgb(192, 132, 252), rgb(59, 130, 246), rgb(251, 146, 60));
+  background-size: 300% 100%;
+  animation: gradientShift 12s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Scrollbar hide for carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Use-case carousel: drag state (no page scroll, grabbing cursor) */
+#use-cases-track.carousel-dragging {
+  touch-action: none;
+  cursor: grabbing;
+}
+
+/* Nav link underline (hellotwiin.com style) - ensures pseudo-element exists */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: hsl(var(--primary));
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile menu: closed by default */
+.mobile-menu-backdrop {
+  opacity: 0;
+  pointer-events: none;
+}
+.mobile-menu-drawer {
+  transform: translateX(-100%);
+}
+
+/* Mobile menu: open state - overlay + slide-in from left */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+body.mobile-menu-open .mobile-menu-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+body.mobile-menu-open .mobile-menu-drawer {
+  transform: translateX(0);
+}
