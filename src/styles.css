@@ -29,6 +29,16 @@
   --accent: 263 70% 58%;
 }
 
+/* Tailwind v4: expose semantic tokens as theme colors (nav uses bg-background, text-foreground, etc.) */
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-primary: hsl(var(--primary));
+  --color-ring: hsl(var(--ring));
+  --color-ring-offset: hsl(var(--background));
+}
+
 /* ---- Keyframes from scraped site ---- */
 @keyframes gradientShift {
   0%, 100% { background-position: 0% 50%; }

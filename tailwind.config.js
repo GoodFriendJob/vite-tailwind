@@ -3,7 +3,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#a78bfa", /* violet-400 – Twiin accent */
+        primary: "hsl(var(--primary))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        border: "hsl(var(--border))",
+        ring: "hsl(var(--ring))",
       },
     },
   },

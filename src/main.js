@@ -61,13 +61,15 @@ function initUseCaseCarousel() {
 
   function updateDots() {
     const logicalIndex = currentIndex % realCount;
-    dotsContainer.querySelectorAll(".carousel-dot").forEach((dot, i) => {
+    dotsContainer.querySelectorAll(".carousel-dot").forEach((btn, i) => {
+      const inner = btn.querySelector(".carousel-dot-inner");
+      if (!inner) return;
       const isActive = i === logicalIndex;
-      dot.classList.toggle("!w-8", isActive);
-      dot.classList.toggle("!h-2", isActive);
-      dot.classList.toggle("!w-2", !isActive);
-      dot.classList.toggle("bg-gray-900", isActive);
-      dot.classList.toggle("bg-gray-300", !isActive);
+      inner.classList.toggle("!w-8", isActive);
+      inner.classList.toggle("!h-2", isActive);
+      inner.classList.toggle("!w-2", !isActive);
+      inner.classList.toggle("bg-white", isActive);
+      inner.classList.toggle("bg-white/40", !isActive);
     });
   }
 
