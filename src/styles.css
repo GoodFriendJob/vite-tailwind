@@ -74,6 +74,12 @@ html,
   50% { transform: translate(-30%, -70%) scale(1.2); opacity: 0.8; }
 }
 
+/* Blink/pulse for gradient border (no rotation) */
+@keyframes gradientBorderBlink {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
@@ -81,6 +87,18 @@ html,
 
 .animate-breathingCursor {
   animation: breathingCursor 1s ease-in-out infinite;
+}
+
+.animate-travelingGlow {
+  animation: 6s ease-in-out 0s infinite normal none running travelingGlow;
+}
+
+.animate-gradientRotate {
+  animation: 10s linear 0s infinite normal none running gradientRotate;
+}
+
+.animate-gradientBorderBlink {
+  animation: gradientBorderBlink 2s ease-in-out infinite;
 }
 
 /* ---- Utility classes ---- */

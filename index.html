@@ -273,17 +273,68 @@
         <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none z-50"></div>
       </section>
 
-      <!-- Pricing (gradient CTA like hellotwiin.com) -->
-      <section class="border-t border-gray-200 py-24 bg-white overflow-hidden">
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-8">
-          <div class="flex flex-col items-center text-center">
-            <h2 class="section-title text-[3.25rem] sm:text-[3.9rem] md:text-7xl lg:text-8xl font-bold tracking-[-0.03em] leading-[1.05]"><span class="text-gradient-purple block">Hire a Twiin</span><span class="block text-gray-900 mt-1">for just $19 a month</span></h2>
-            <p class="mt-6 text-xl text-gray-700">Ask my Twiin anything…<span class="inline-block w-[2px] h-5 ml-0.5 bg-gray-900 align-middle animate-breathingCursor" style="animation: breathingCursor 1s ease-in-out infinite;"></span></p>
-            <p class="mt-8 text-gray-600 max-w-3xl mx-auto">Traditional hiring is expensive. Twiin isn't. Meet a 24/7 expert on your business that answers exactly like you—instantly. <span class="font-medium bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">Scale your support without scaling your payroll.</span></p>
-            <p class="mt-4 text-sm text-gray-500">$0.60/day based on $19.99/mo subscription. Prices subject to change.</p>
-            <a href="#" class="mt-10 inline-flex items-center justify-center rounded-full h-12 px-8 py-5 text-base font-semibold text-white border border-transparent bg-gradient-to-br from-amber-500 via-violet-500 to-blue-500 hover:shadow-lg hover:shadow-violet-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-md">Get Started</a>
+      <!-- Pricing (dark CTA + chat input with typing, like hellotwiin.com) -->
+      <section class="section-title relative pt-12 pb-20 sm:pt-20 sm:pb-32 lg:pt-28 lg:pb-48 bg-black overflow-hidden" id="hire-section">
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black pointer-events-none"></div>
+        <div class="container relative max-w-6xl mx-auto px-4 sm:px-8">
+          <div class="flex flex-col items-center">
+            <div class="text-center space-y-3 sm:space-y-4 lg:space-y-6 mb-8 sm:mb-12 lg:mb-20">
+              <h2 class="text-[3.25rem] sm:text-[3.9rem] md:text-7xl lg:text-8xl font-bold tracking-[-0.03em] leading-[1.05] overflow-visible">
+                <span class="inline-block pb-[0.15em] -mb-[0.15em] text-gradient-purple will-change-transform">Hire a Twiin</span><br>
+                <span class="inline-block mt-1 sm:mt-1.5 lg:mt-2 pb-[0.15em] -mb-[0.15em] text-white will-change-transform">for just $19 a month</span>
+              </h2>
+            </div>
+            <div class="flex items-center justify-center py-10 sm:py-20 lg:py-32 min-h-[120px] sm:min-h-[160px] will-change-transform">
+              <div class="w-full px-4 sm:px-0">
+                <div class="relative w-[300px] sm:w-[420px] md:w-[500px] lg:w-[560px] mx-auto">
+                  <!-- Blinking gradient border (no rotation) -->
+                  <div class="absolute inset-0 pointer-events-none" style="transform: translateZ(0);">
+                    <div class="absolute inset-[-4px] rounded-[1.5rem] sm:rounded-[2rem] opacity-70 overflow-hidden">
+                      <div class="absolute left-1/2 top-1/2 w-20 sm:w-32 h-20 sm:h-32 rounded-full blur-[25px] sm:blur-[40px] -translate-x-1/2 -translate-y-1/2 animate-travelingGlow" style="background: radial-gradient(circle, hsl(var(--twiin-pink)) 0%, hsl(var(--twiin-violet)) 50%, transparent 70%); backface-visibility: hidden;"></div>
+                    </div>
+                    <div class="absolute inset-0 rounded-[1.5rem] sm:rounded-[2rem] blur-[20px] sm:blur-[30px] scale-110 animate-gradientBorderBlink" style="background: conic-gradient(from 0deg, hsl(var(--twiin-pink)), hsl(var(--twiin-magenta)), hsl(var(--twiin-violet)), hsl(var(--twiin-blue)), hsl(var(--twiin-orange)), hsl(var(--twiin-pink))); backface-visibility: hidden;"></div>
+                    <div class="absolute inset-[-2px] sm:inset-[-3px] rounded-[1.5rem] sm:rounded-[2rem] blur-[6px] sm:blur-[8px] animate-gradientBorderBlink" style="background: conic-gradient(from 0deg, hsl(var(--twiin-pink)), hsl(var(--twiin-magenta)), hsl(var(--twiin-violet)), hsl(var(--twiin-blue)), hsl(var(--twiin-orange)), hsl(var(--twiin-pink))); backface-visibility: hidden;"></div>
+                    <div class="absolute inset-[-1px] rounded-[1.5rem] sm:rounded-[2rem] animate-gradientBorderBlink" style="background: conic-gradient(from 0deg, hsl(var(--twiin-pink)), hsl(var(--twiin-magenta)), hsl(var(--twiin-violet)), hsl(var(--twiin-blue)), hsl(var(--twiin-orange)), hsl(var(--twiin-pink)));"></div>
+                  </div>
+                  <!-- Chat input box -->
+                  <div class="relative rounded-[1.5rem] sm:rounded-[2rem] px-4 sm:px-6 py-4 sm:py-5 transition-all duration-300 bg-[rgba(5,5,5,0.92)] backdrop-blur-[20px] contain-[layout_paint]">
+                    <div class="flex items-center gap-2 sm:gap-4">
+                      <button type="button" class="group p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:bg-white/5" aria-label="Attach">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 sm:w-5 h-4 sm:h-5 text-white/40 transition-all duration-300 group-hover:text-transparent group-hover:stroke-[url(#hireIconGradient)]"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                      </button>
+                      <div class="flex-1 relative h-[40px] sm:h-[28px] flex items-center overflow-hidden min-w-0">
+                        <span id="hire-typing-text" class="text-white/90 font-sans text-[12px] sm:text-lg tracking-normal break-words line-clamp-2 sm:whitespace-nowrap sm:line-clamp-1 sm:overflow-hidden sm:text-ellipsis max-w-full block leading-snug"></span>
+                        <span class="inline-block w-[2px] h-4 sm:h-5 ml-0.5 bg-white align-middle shrink-0 animate-breathingCursor" aria-hidden="true"></span>
+                      </div>
+                      <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+                        <button type="button" class="group p-1.5 sm:p-2 rounded-full transition-all duration-300 hover:bg-white/5" aria-label="Voice input">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mic w-4 sm:w-5 h-4 sm:h-5 text-white/40"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" x2="12" y1="19" y2="22"></line></svg>
+                        </button>
+                        <button type="button" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center bg-white/10 transition-all duration-300" aria-label="AI">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-4 h-4 sm:w-5 sm:h-5 text-white/40"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <svg width="0" height="0" class="absolute" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="hireIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="hsl(var(--twiin-pink))"></stop>
+                        <stop offset="50%" stop-color="hsl(var(--twiin-violet))"></stop>
+                        <stop offset="100%" stop-color="hsl(var(--twiin-blue))"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="text-[13px] sm:text-base lg:text-lg text-gray-400 leading-relaxed tracking-[-0.01em] max-w-3xl mx-auto text-center px-2 mt-16 sm:mt-24 lg:mt-32 will-change-transform">
+              <span class="font-medium text-white">Traditional hiring is expensive. Twiin isn't.</span><br>
+              Meet a 24/7 expert on your business that answers exactly like you—instantly. Never sleeps, never calls in sick, and never misses a beat. <span class="font-medium bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">Scale your support without scaling your payroll.</span>
+            </p>
           </div>
         </div>
+        <p class="absolute bottom-4 left-0 right-0 text-[9px] sm:text-[10px] text-gray-500 text-center">$0.60/day based on $19.99/mo subscription. Prices subject to change.</p>
       </section>
 
       <!-- Only one you + phone mockup -->

@@ -19,6 +19,51 @@ window.lenis = lenis;
 // GSAP / page animations
 initAnimations();
 
+// Hire section: typing animation in chat input (cycles through sample questions)
+function initHireTyping() {
+  const el = document.getElementById("hire-typing-text");
+  if (!el) return;
+  const phrases = [
+    "How do I get more bookings?",
+    "Is the place close to the Eiffel Tower?",
+    "Ask my Twiin anything…",
+    "What are your pet policies?",
+    "Do you offer long-term stays?",
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typeMs = 60;
+  const deleteMs = 35;
+  const pauseAfterType = 2200;
+  const pauseAfterDelete = 600;
+
+  function tick() {
+    const phrase = phrases[phraseIndex];
+    if (isDeleting) {
+      charIndex--;
+      el.textContent = phrase.slice(0, charIndex);
+      if (charIndex <= 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(tick, pauseAfterDelete);
+        return;
+      }
+      setTimeout(tick, deleteMs);
+    } else {
+      charIndex++;
+      el.textContent = phrase.slice(0, charIndex);
+      if (charIndex >= phrase.length) {
+        isDeleting = true;
+        setTimeout(tick, pauseAfterType);
+        return;
+      }
+      setTimeout(tick, typeMs);
+    }
+  }
+  setTimeout(tick, 400);
+}
+
 // Use-case carousel: full-width, infinite, auto slideshow (like hellotwiin.com)
 function initUseCaseCarousel() {
   const track = document.getElementById("use-cases-track");
@@ -199,10 +244,12 @@ function initMobileMenu() {
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
+    initHireTyping();
     initUseCaseCarousel();
     initMobileMenu();
   });
 } else {
+  initHireTyping();
   initUseCaseCarousel();
   initMobileMenu();
 }
