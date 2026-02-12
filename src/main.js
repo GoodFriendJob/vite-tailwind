@@ -682,6 +682,26 @@ function initTestimonialsCarousel() {
   resetAutoTimer();
 }
 
+// Top nav & mobile nav: smooth scroll to section when anchor link is clicked
+function initSmoothNavScroll() {
+  const hashToId = { possibilities: "use-cases", why: "philosophy", how: "how-it-works", "at-work": "hire-section", impact: "calculator", products: "pricing", answers: "faq" };
+
+  function handleAnchorClick(e) {
+    const a = e.currentTarget;
+    const href = a.getAttribute("href") || "";
+    if (href === "#" || !href.startsWith("#")) return;
+    const hash = href.slice(1);
+    const targetId = hashToId[hash] || hash;
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    e.preventDefault();
+    lenis.scrollTo(target, { duration: 1.2 });
+  }
+
+  const navLinks = document.querySelectorAll('nav a[href^="#"], #mobile-menu-drawer a[href^="#"]');
+  navLinks.forEach((link) => link.addEventListener("click", handleAnchorClick));
+}
+
 // FAQ accordion: toggle open/closed on trigger click
 function initFaqAccordion() {
   const container = document.getElementById("faq-accordion");
@@ -707,6 +727,7 @@ function initFaqAccordion() {
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
+    initSmoothNavScroll();
     initHireTyping();
     initUseCaseCarousel();
     initPhysicalBridgeCarousel();
@@ -716,6 +737,7 @@ if (document.readyState === "loading") {
     initMobileMenu();
   });
 } else {
+  initSmoothNavScroll();
   initHireTyping();
   initUseCaseCarousel();
   initPhysicalBridgeCarousel();
