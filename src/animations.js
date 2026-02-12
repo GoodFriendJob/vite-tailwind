@@ -112,8 +112,8 @@ function initSectionTitleEffects() {
 
     ScrollTrigger.create({
       trigger: section,
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 65%",
+      end: "bottom 25%",
       onEnter: slideInUp,
       onLeaveBack: slideOutDown,
       onLeave: slideOutDown,
@@ -126,19 +126,36 @@ function initCalculatorProgressBars() {
   const block = document.getElementById("calculator");
   const section = block?.querySelector("section");
   const fills = block ? block.querySelectorAll(".calculator-progress-fill") : [];
+  const valueEls = block ? block.querySelectorAll(".calculator-scroll-value") : [];
   if (!section || fills.length === 0) return;
 
-  // Progress 0→1 as section moves from just entering (bottom) to well in view (top 20%)
-  // Scroll down = fill %, scroll up = unfill %
+  const progressClamp = (p) => Math.max(0, Math.min(1, p));
+
   ScrollTrigger.create({
     trigger: section,
-    start: "top bottom",
-    end: "top 20%",
+    start: "top 50%",
+    end: "top 25%",
     scrub: 0.4,
     onUpdate: (self) => {
-      const pct = Math.max(0, Math.min(100, self.progress * 100));
+      const progress = progressClamp(self.progress);
+
+      const pct = progress * 100;
       fills.forEach((el) => {
         el.style.width = pct + "%";
+      });
+
+      valueEls.forEach((el) => {
+        const end = Number(el.dataset.end);
+        const prefix = el.dataset.prefix || "";
+        const suffix = el.dataset.suffix || "";
+        const format = el.dataset.format;
+        const value = Math.round(progress * end);
+        const display =
+          format === "number" && value >= 1000
+            ? value.toLocaleString()
+            : String(value);
+        el.textContent = prefix + display + suffix;
+        if (format === "number") el.offsetHeight;
       });
     },
   });
