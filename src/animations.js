@@ -133,9 +133,9 @@ function initCalculatorProgressBars() {
 
   ScrollTrigger.create({
     trigger: section,
-    start: "top 50%",
-    end: "top 25%",
-    scrub: 0.4,
+    start: "top 90%",
+    end: "top 0%",
+    scrub: 2.0,
     onUpdate: (self) => {
       const progress = progressClamp(self.progress);
 
