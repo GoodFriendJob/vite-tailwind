@@ -41,6 +41,9 @@ html,
   --muted: 0 0% 96%;
   --muted-foreground: 0 0% 45%;
   --accent: 263 70% 58%;
+  --headline-gradient-purple: 263 60% 55%;
+  --headline-gradient-pink: 330 80% 60%;
+  --headline-gradient-light: 31 97% 56%;
 }
 
 /* Tailwind v4: expose semantic tokens as theme colors (nav uses bg-background, text-foreground, etc.) */
@@ -190,4 +193,26 @@ body.mobile-menu-open .mobile-menu-backdrop {
 }
 body.mobile-menu-open .mobile-menu-drawer {
   transform: translateX(0);
+}
+
+/* How it works: 3D carousel – center card styling and transitions */
+.how-card {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+.how-card-glow {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.how-card-center .how-card-glow {
+  opacity: 0.3;
+}
+.how-card-center .how-card-border {
+  background: linear-gradient(135deg, rgba(249,122,31,0.8) 0%, rgba(127,108,224,0.9) 50%, rgba(172,97,209,0.8) 100%) !important;
+  box-shadow: rgba(249,122,31,0.3) 0 0 35px 6px, rgba(76,51,204,0.2) 0 0 70px 12px !important;
+}
+.how-card-center .how-card-inner svg,
+.how-card-center .how-card-inner span {
+  color: rgba(255,255,255,0.95) !important;
+  filter: drop-shadow(rgba(249,122,31,0.5) 0 2px 8px);
+  text-shadow: rgba(0,0,0,0.3) 0 1px 4px;
 }

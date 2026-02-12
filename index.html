@@ -338,53 +338,146 @@
       </section>
 
       <!-- Philosophy: Only one you. Until now. (scroll-driven 3D phones like hellotwiin.com) -->
-      <section id="philosophy" class="py-20 sm:py-24 px-5 sm:px-6 bg-background border-t border-gray-200">
+      <section id="philosophy" class="py-20 sm:py-24 px-5 sm:px-6 bg-background border-t border-gray-200" style="content-visibility: auto; contain-intrinsic-size: 0 800px; contain: layout paint;">
         <div class="max-w-6xl mx-auto space-y-12 sm:space-y-16">
           <h2 class="section-title text-[3.25rem] leading-[1.1] sm:text-[3.9rem] md:text-7xl lg:text-9xl font-bold text-center tracking-[-0.03em] px-2 sm:px-0 overflow-visible">
             <span class="inline-block pb-[0.15em] -mb-[0.15em] text-foreground">Only one you.</span><br>
             <span class="inline-block pb-[0.15em] -mb-[0.15em] text-gradient-purple">Until now.</span>
           </h2>
-          <div class="philosophy-phones-wrapper relative h-[650px] flex items-center justify-center" style="contain: layout; transform-style: preserve-3d; perspective: 1000px;">
-            <div class="philosophy-phone absolute left-1/2 top-1/2 will-change-transform" style="backface-visibility: hidden;">
-              <div class="relative w-[300px] aspect-[9/19.5] rounded-[3rem] overflow-hidden shadow-lg md:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.4),0_20px_60px_-10px_rgba(0,0,0,0.3)]" style="contain: layout paint;">
-                <img src="/assets/img/phone-mockup-zero-state-B60yn-kr.png" alt="Twiin app – get started" class="w-full h-full object-cover" />
+          <!-- Philosophy feature cards (Be everywhere / Always your best day / Yours alone) -->
+          <div class="philosophy-features">
+            <div class="md:hidden -mx-6">
+              <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-3 scrollbar-hide">
+                <div class="group snap-center shrink-0 w-[85%] space-y-4 text-left rounded-2xl bg-background/80 border border-foreground/[0.06] shadow-md px-5 py-6 transition-all duration-700 ease-out active:scale-[0.98]">
+                  <div class="relative w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-1 transition-all duration-300 ease-out group-hover:bg-accent/15 group-hover:scale-110 before:absolute before:inset-0 before:rounded-full before:p-[2px] before:bg-gradient-to-br before:from-[hsl(var(--headline-gradient-purple))] before:via-[hsl(var(--headline-gradient-pink))] before:to-[hsl(var(--headline-gradient-light))] before:-z-10 before:opacity-30 group-hover:before:opacity-60 before:transition-opacity before:duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-accent transition-transform duration-300 ease-out group-hover:rotate-6"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-foreground">Be everywhere.</h3>
+                  <p class="text-sm leading-relaxed transition-colors duration-300 text-foreground">Physics says you can't be in two places at once. <span class="font-bold">Twiin</span> says you can be in a thousand. Scale your presence without splitting your focus.</p>
+                </div>
+                <div class="group snap-center shrink-0 w-[85%] space-y-4 text-left rounded-2xl bg-background/80 border border-foreground/[0.06] shadow-md px-5 py-6 transition-all duration-700 ease-out active:scale-[0.98]">
+                  <div class="relative w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-1 transition-all duration-300 ease-out group-hover:bg-accent/15 group-hover:scale-110 before:absolute before:inset-0 before:rounded-full before:p-[2px] before:bg-gradient-to-br before:from-[hsl(var(--headline-gradient-purple))] before:via-[hsl(var(--headline-gradient-pink))] before:to-[hsl(var(--headline-gradient-light))] before:-z-10 before:opacity-30 group-hover:before:opacity-60 before:transition-opacity before:duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-6 h-6 text-accent transition-transform duration-300 ease-out group-hover:rotate-6"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-foreground">Always your best day.</h3>
+                  <p class="text-sm leading-relaxed transition-colors duration-300 text-foreground/60">No burnout. No fatigue. Your <span class="font-bold">Twiin</span> delivers your expertise with the same patience, tone, and precision—every single time.</p>
+                </div>
+                <div class="group snap-center shrink-0 w-[85%] space-y-4 text-left rounded-2xl bg-background/80 border border-foreground/[0.06] shadow-md px-5 py-6 transition-all duration-700 ease-out active:scale-[0.98]">
+                  <div class="relative w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-1 transition-all duration-300 ease-out group-hover:bg-accent/15 group-hover:scale-110 before:absolute before:inset-0 before:rounded-full before:p-[2px] before:bg-gradient-to-br before:from-[hsl(var(--headline-gradient-purple))] before:via-[hsl(var(--headline-gradient-pink))] before:to-[hsl(var(--headline-gradient-light))] before:-z-10 before:opacity-30 group-hover:before:opacity-60 before:transition-opacity before:duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock w-6 h-6 text-accent transition-transform duration-300 ease-out group-hover:rotate-6"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  </div>
+                  <h3 class="text-xl font-bold text-foreground">Yours alone.</h3>
+                  <p class="text-sm leading-relaxed transition-colors duration-300 text-foreground/60">Your knowledge, in one place. Fully encrypted. Never shared. Never used to train public models. A private memory built only from you, for you.</p>
+                </div>
               </div>
             </div>
-            <div class="philosophy-phone absolute left-1/2 top-1/2 will-change-transform" style="backface-visibility: hidden;">
-              <div class="relative w-[300px] aspect-[9/19.5] rounded-[3rem] overflow-hidden shadow-lg md:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.4),0_20px_60px_-10px_rgba(0,0,0,0.3)]" style="contain: layout paint;">
-                <img src="/assets/img/phone-mockup-chat-state-BN-AsfwH.png" alt="Twiin chat" class="w-full h-full object-cover" />
+            <div class="hidden md:grid md:grid-cols-3 gap-12">
+              <div class="group space-y-5 text-center transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] cursor-default will-change-transform">
+                <div class="relative mx-auto w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-accent/15 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-accent/20 before:absolute before:inset-0 before:rounded-full before:p-[2px] before:bg-gradient-to-br before:from-[hsl(var(--headline-gradient-purple))] before:via-[hsl(var(--headline-gradient-pink))] before:to-[hsl(var(--headline-gradient-light))] before:-z-10 before:opacity-30 group-hover:before:opacity-70 before:transition-opacity before:duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-7 h-7 text-accent transition-transform duration-300 ease-out group-hover:rotate-6"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-accent">Be everywhere.</h3>
+                <p class="text-foreground/75 leading-relaxed transition-colors duration-300 group-hover:text-foreground">Physics says you can't be in two places at once. <span class="font-bold">Twiin</span> says you can be in a thousand. Scale your presence without splitting your focus.</p>
+              </div>
+              <div class="group space-y-5 text-center transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] cursor-default will-change-transform">
+                <div class="relative mx-auto w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-accent/15 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-accent/20 before:absolute before:inset-0 before:rounded-full before:p-[2px] before:bg-gradient-to-br before:from-[hsl(var(--headline-gradient-purple))] before:via-[hsl(var(--headline-gradient-pink))] before:to-[hsl(var(--headline-gradient-light))] before:-z-10 before:opacity-30 group-hover:before:opacity-70 before:transition-opacity before:duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-7 h-7 text-accent transition-transform duration-300 ease-out group-hover:rotate-6"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-accent">Always your best day.</h3>
+                <p class="text-foreground/75 leading-relaxed transition-colors duration-300 group-hover:text-foreground">No burnout. No fatigue. Your <span class="font-bold">Twiin</span> delivers your expertise with the same patience, tone, and precision—every single time.</p>
+              </div>
+              <div class="group space-y-5 text-center transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] cursor-default will-change-transform">
+                <div class="relative mx-auto w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center transition-all duration-300 ease-out group-hover:bg-accent/15 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-accent/20 before:absolute before:inset-0 before:rounded-full before:p-[2px] before:bg-gradient-to-br before:from-[hsl(var(--headline-gradient-purple))] before:via-[hsl(var(--headline-gradient-pink))] before:to-[hsl(var(--headline-gradient-light))] before:-z-10 before:opacity-30 group-hover:before:opacity-70 before:transition-opacity before:duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock w-7 h-7 text-accent transition-transform duration-300 ease-out group-hover:rotate-6"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-accent">Yours alone.</h3>
+                <p class="text-foreground/75 leading-relaxed transition-colors duration-300 group-hover:text-foreground">Your knowledge, in one place. Fully encrypted. Never shared. Never used to train public models. A private memory built only from you, for you.</p>
               </div>
             </div>
-            <div class="philosophy-phone absolute left-1/2 top-1/2 will-change-transform" style="backface-visibility: hidden;">
-              <div class="relative w-[300px] aspect-[9/19.5] rounded-[3rem] overflow-hidden shadow-lg md:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.4),0_20px_60px_-10px_rgba(0,0,0,0.3)]" style="contain: layout paint;">
-                <img src="/assets/img/phone-mockup-zero-state-B60yn-kr.png" alt="Twiin app" class="w-full h-full object-cover" />
-              </div>
-            </div>
+          </div>
+          <div class="flex justify-center pt-6 sm:pt-8">
+            <a href="#" class="inline-flex items-center justify-center gap-2 whitespace-nowrap tracking-[-0.01em] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 relative overflow-hidden group bg-gradient-to-br from-[hsla(31,97%,56%,0.37)] via-[hsla(280,60%,55%,0.37)] to-[hsla(250,70%,55%,0.37)] backdrop-blur-md text-white font-semibold border border-white/20 hover:from-[hsla(31,97%,56%,0.47)] hover:via-[hsla(280,60%,55%,0.47)] hover:to-[hsla(250,70%,55%,0.47)] hover:border-white/30 hover:scale-[1.02] active:scale-[0.98] ease-out h-12 text-base sm:text-lg px-7 py-5 sm:px-8 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">Get Started</a>
           </div>
         </div>
       </section>
 
-      <!-- Chat demo - Chef Bianca -->
-      <section class="border-t border-gray-200 py-24 bg-gray-50">
-        <div class="mx-auto max-w-4xl px-6">
-          <h2 class="section-title text-center text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">👋 Chef Bianca's Twiin here to answer questions.</h2>
-          <div class="mt-16 flex flex-col items-center gap-8 md:flex-row md:items-start md:justify-center">
-            <img src="/assets/img/avatar-chef-bianca-CDgxPVN8.L2Fzc2V0cy.jpg" alt="Chef Bianca" class="h-24 w-24 rounded-full object-cover md:h-32 md:w-32" />
-            <div class="space-y-4">
-              <div class="rounded-2xl rounded-tl-sm border border-gray-200 bg-white p-4 shadow-sm">
-                <p class="text-sm text-gray-600">🌾 Any gluten free options?</p>
+      <!-- How it works: Upload. Done. (dark section + source-type cards carousel) -->
+      <section id="how-it-works" class="relative overflow-hidden min-h-[100vh]" style="content-visibility: auto; contain-intrinsic-size: 0 800px;">
+        <div class="absolute inset-0" style="background: linear-gradient(rgb(0,0,0) 0%, rgb(5,5,5) 50%, rgb(0,0,0) 100%);"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(80% 60% at 50% 40%, rgba(249,122,31,0.06) 0%, rgba(128,51,204,0.03) 40%, transparent 70%);"></div>
+        <div class="absolute -top-40 -right-40 w-[800px] h-[800px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(249,122,31,0.18) 0%, rgba(106,77,255,0.08) 40%, transparent 65%);"></div>
+        <div class="absolute -bottom-40 -left-40 w-[700px] h-[700px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(185,108,224,0.14) 0%, rgba(249,122,31,0.06) 50%, transparent 65%);"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(128,51,204,0.06) 0%, transparent 60%);"></div>
+        <div class="px-6 pt-20 pb-8 relative z-10">
+          <div class="relative max-w-6xl mx-auto text-center space-y-4">
+            <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-[-0.03em]" style="background: linear-gradient(90deg, rgb(250,137,56) 0%, rgb(157,140,242) 50%, rgb(109,162,248) 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Upload. Done.</h2>
+            <p class="text-xl sm:text-2xl md:text-3xl font-normal" style="color: rgba(173,193,235,0.7);">Intelligence. Drag and dropped.</p>
+          </div>
+        </div>
+        <div class="relative py-8 z-10">
+          <div class="relative h-[340px] sm:h-[400px] w-full flex items-center justify-center" style="perspective: 1400px; contain: layout style;">
+            <div class="absolute w-[350px] h-[350px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(32,92,223,0.12) 0%, rgba(61,34,195,0.06) 50%, transparent 70%);"></div>
+            <div id="how-cards-viewport" class="relative w-full h-full flex items-center justify-center touch-pan-y cursor-grab" style="transform-style: preserve-3d; touch-action: pan-y;">
+              <div class="how-card absolute cursor-pointer will-change-transform" style="z-index: 10; backface-visibility: hidden; transform: translateX(200px) scale(0.6); opacity: 0.23;">
+                <div class="how-card-glow absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none w-[150px] h-[18px] -bottom-6 opacity-0" style="background: radial-gradient(rgba(20,40,82,0.8) 0%, transparent 70%); filter: blur(12px);"></div>
+                <div class="how-card-border relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] rounded-[2.5rem] p-[1.5px]" style="background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.22) 100%); box-shadow: rgba(77,94,179,0.1) 0 0 20px 2px, rgba(13,17,38,0.6) 0 20px 50px -10px;">
+                  <div class="how-card-inner relative w-full h-full rounded-[2.3rem] flex flex-col items-center justify-center gap-4 overflow-hidden" style="background: linear-gradient(165deg, rgba(75,88,155,0.55) 0%, rgba(62,62,116,0.65) 50%, rgba(59,50,103,0.7) 100%); backdrop-filter: blur(40px) saturate(1.5);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="relative z-10" style="color: rgba(255,255,255,0.75);"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    <span class="relative z-10 text-sm font-medium tracking-wide" style="color: rgba(255,255,255,0.6);">Web</span>
+                  </div>
+                </div>
               </div>
-              <div class="rounded-2xl rounded-tl-sm border border-gray-200 bg-white p-4 shadow-sm">
-                <p class="text-gray-900">Absolutely! Our risotto is naturally gluten-free, and we can prepare any pasta with rice noodles upon request.</p>
+              <div class="how-card absolute cursor-pointer will-change-transform" style="z-index: 10; backface-visibility: hidden; transform: translateX(-200px) scale(0.6); opacity: 0.23;">
+                <div class="how-card-glow absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none w-[150px] h-[18px] -bottom-6 opacity-0" style="background: radial-gradient(rgba(20,40,82,0.8) 0%, transparent 70%); filter: blur(12px);"></div>
+                <div class="how-card-border relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] rounded-[2.5rem] p-[1.5px]" style="background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.22) 100%); box-shadow: rgba(77,94,179,0.1) 0 0 20px 2px, rgba(13,17,38,0.6) 0 20px 50px -10px;">
+                  <div class="how-card-inner relative w-full h-full rounded-[2.3rem] flex flex-col items-center justify-center gap-4 overflow-hidden" style="background: linear-gradient(165deg, rgba(75,88,155,0.55) 0%, rgba(62,62,116,0.65) 50%, rgba(59,50,103,0.7) 100%); backdrop-filter: blur(40px) saturate(1.5);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="relative z-10" style="color: rgba(255,255,255,0.75);"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg>
+                    <span class="relative z-10 text-sm font-medium tracking-wide" style="color: rgba(255,255,255,0.6);">Links</span>
+                  </div>
+                </div>
               </div>
-              <div class="rounded-2xl rounded-tl-sm border border-gray-200 bg-white p-4 shadow-sm">
-                <p class="text-sm text-gray-600">🚗 Is there parking close by?</p>
+              <div class="how-card absolute cursor-pointer will-change-transform" style="z-index: 65; backface-visibility: hidden; transform: translateX(323px) scale(0.91); opacity: 0.71;">
+                <div class="how-card-glow absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none w-[150px] h-[18px] -bottom-6 opacity-0" style="background: radial-gradient(rgba(20,40,82,0.8) 0%, transparent 70%); filter: blur(12px);"></div>
+                <div class="how-card-border relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] rounded-[2.5rem] p-[1.5px]" style="background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.22) 100%); box-shadow: rgba(77,94,179,0.1) 0 0 20px 2px, rgba(13,17,38,0.6) 0 20px 50px -10px;">
+                  <div class="how-card-inner relative w-full h-full rounded-[2.3rem] flex flex-col items-center justify-center gap-4 overflow-hidden" style="background: linear-gradient(165deg, rgba(75,88,155,0.55) 0%, rgba(62,62,116,0.65) 50%, rgba(59,50,103,0.7) 100%); backdrop-filter: blur(40px) saturate(1.5);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="relative z-10" style="color: rgba(255,255,255,0.75);"><path d="M2 10v3"/><path d="M6 6v11"/><path d="M10 3v18"/><path d="M14 8v7"/><path d="M18 5v13"/><path d="M22 10v3"/></svg>
+                    <span class="relative z-10 text-sm font-medium tracking-wide" style="color: rgba(255,255,255,0.6);">Dictation</span>
+                  </div>
+                </div>
               </div>
-              <div class="rounded-2xl rounded-tl-sm border border-gray-200 bg-white p-4 shadow-sm">
-                <p class="text-gray-900">Yes! There's a public lot just half a block down on Oak Street. Free after 6pm on weekdays.</p>
+              <div class="how-card absolute cursor-pointer will-change-transform" style="z-index: 65; backface-visibility: hidden; transform: translateX(-323px) scale(0.91); opacity: 0.71;">
+                <div class="how-card-glow absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none w-[150px] h-[18px] -bottom-6 opacity-0" style="background: radial-gradient(rgba(20,40,82,0.8) 0%, transparent 70%); filter: blur(12px);"></div>
+                <div class="how-card-border relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] rounded-[2.5rem] p-[1.5px]" style="background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.22) 100%); box-shadow: rgba(77,94,179,0.1) 0 0 20px 2px, rgba(13,17,38,0.6) 0 20px 50px -10px;">
+                  <div class="how-card-inner relative w-full h-full rounded-[2.3rem] flex flex-col items-center justify-center gap-4 overflow-hidden" style="background: linear-gradient(165deg, rgba(75,88,155,0.55) 0%, rgba(62,62,116,0.65) 50%, rgba(59,50,103,0.7) 100%); backdrop-filter: blur(40px) saturate(1.5);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="relative z-10" style="color: rgba(255,255,255,0.75);"><path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21"/><path d="m14 19.5 3-3 3 3"/><path d="M17 22v-5.5"/><circle cx="9" cy="9" r="2"/></svg>
+                    <span class="relative z-10 text-sm font-medium tracking-wide" style="color: rgba(255,255,255,0.6);">Pictures</span>
+                  </div>
+                </div>
+              </div>
+              <div class="how-card how-card-center absolute cursor-pointer will-change-transform" style="z-index: 100; backface-visibility: hidden; transform: scale(1.1); opacity: 1;">
+                <div class="how-card-glow absolute left-1/2 -translate-x-1/2 rounded-full pointer-events-none w-[150px] h-[18px] -bottom-6" style="background: radial-gradient(rgba(20,40,82,0.8) 0%, transparent 70%); filter: blur(12px);"></div>
+                <div class="relative flex flex-col items-center justify-center">
+                  <div class="how-card-border relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] rounded-[2.5rem] p-[1.5px]" style="background: linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.22) 100%); box-shadow: rgba(77,94,179,0.1) 0 0 20px 2px, rgba(13,17,38,0.6) 0 20px 50px -10px;">
+                    <div class="how-card-inner relative w-full h-full rounded-[2.3rem] flex flex-col items-center justify-center gap-4 overflow-hidden" style="background: linear-gradient(165deg, rgba(75,88,155,0.55) 0%, rgba(62,62,116,0.65) 50%, rgba(59,50,103,0.7) 100%); backdrop-filter: blur(40px) saturate(1.5);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" class="relative z-10" style="color: rgba(255,255,255,0.75);"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                      <span class="relative z-10 text-sm font-medium tracking-wide" style="color: rgba(255,255,255,0.6);">Documents</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-[500px] h-[80px] rounded-full pointer-events-none" style="background: radial-gradient(rgba(40,87,189,0.15) 0%, transparent 70%);"></div>
           </div>
+          <div class="flex justify-center gap-3 mt-6">
+            <button type="button" class="how-dot w-3 h-3 rounded-full transition-all duration-[600ms]" style="background: linear-gradient(135deg, rgb(249,122,31) 0%, rgb(127,102,255) 100%); transform: scale(1.3); box-shadow: rgba(249,122,31,0.5) 0 0 16px 3px, rgba(255,255,255,0.3) 0 1px 0 inset;" aria-label="Source 1" aria-current="true"></button>
+            <button type="button" class="how-dot w-3 h-3 rounded-full transition-all duration-[600ms]" style="background: rgba(128,128,128,0.25); box-shadow: rgba(0,0,0,0.3) 0 1px 2px inset;" aria-label="Source 2"></button>
+            <button type="button" class="how-dot w-3 h-3 rounded-full transition-all duration-[600ms]" style="background: rgba(128,128,128,0.25); box-shadow: rgba(0,0,0,0.3) 0 1px 2px inset;" aria-label="Source 3"></button>
+            <button type="button" class="how-dot w-3 h-3 rounded-full transition-all duration-[600ms]" style="background: rgba(128,128,128,0.25); box-shadow: rgba(0,0,0,0.3) 0 1px 2px inset;" aria-label="Source 4"></button>
+            <button type="button" class="how-dot w-3 h-3 rounded-full transition-all duration-[600ms]" style="background: rgba(128,128,128,0.25); box-shadow: rgba(0,0,0,0.3) 0 1px 2px inset;" aria-label="Source 5"></button>
+          </div>
+        </div>
+        <div class="px-6 pt-6 pb-20 relative z-10">
+          <p class="max-w-3xl mx-auto leading-[1.7] text-center text-xl font-normal" style="color: rgba(166,182,217,0.6);">No coding. No setup. Just drag and drop the files you already have. Twiin absorbs them instantly—getting sharper with every upload.</p>
         </div>
       </section>
 
@@ -408,22 +501,6 @@
           <div class="mt-16 text-center">
             <a href="#" class="inline-flex items-center justify-center rounded-full h-12 px-8 py-5 text-base font-semibold text-white border border-transparent bg-gradient-to-br from-amber-500 via-violet-500 to-blue-500 hover:shadow-lg hover:shadow-violet-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">Get Started</a>
           </div>
-        </div>
-      </section>
-
-      <!-- Upload. Done. (glass cards + hover) -->
-      <section class="border-t border-gray-200 py-24 bg-gray-50">
-        <div class="mx-auto max-w-4xl px-6 text-center">
-          <h2 class="section-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-[-0.03em]" style="background: linear-gradient(90deg, rgb(250,137,56), rgb(157,140,242), rgb(109,162,248)); -webkit-background-clip: text; background-clip: text; color: transparent;">Upload. Done.</h2>
-          <p class="mt-4 text-xl sm:text-2xl text-gray-600">Intelligence. Drag and dropped.</p>
-          <div class="mt-12 flex flex-wrap justify-center gap-4">
-            <span class="rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:border-gray-300 cursor-default">Web</span>
-            <span class="rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:border-gray-300 cursor-default">Links</span>
-            <span class="rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:border-gray-300 cursor-default">Dictation</span>
-            <span class="rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:border-gray-300 cursor-default">Pictures</span>
-            <span class="rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:border-gray-300 cursor-default">Documents</span>
-          </div>
-          <p class="mt-8 text-gray-600 max-w-3xl mx-auto">No coding. No setup. Just drag and drop the files you already have. Twiin absorbs them instantly—getting sharper with every upload.</p>
         </div>
       </section>
 

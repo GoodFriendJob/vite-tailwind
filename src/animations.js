@@ -98,15 +98,15 @@ function initPhilosophyPhones() {
   const phones = section?.querySelectorAll(".philosophy-phone");
   if (!wrapper || !phones?.length) return;
 
-  const PHONE_WIDTH_PCT = 13.44;
+  const PHONE_OFFSET_X_PCT = 46.6763;
   const setPhoneTransforms = (progress) => {
     const centerIndex = progress * 2;
     phones.forEach((el, i) => {
       const offset = i - centerIndex;
-      const x = offset * PHONE_WIDTH_PCT;
+      const x = offset * PHONE_OFFSET_X_PCT;
       const z = offset === 0 ? 10 : offset < 0 ? -20 : -10;
-      const scale = offset === 0 ? 1 : 0.894;
-      const opacity = offset === 0 ? 1 : 0.38;
+      const scale = offset === 0 ? 1 : 0.928706;
+      const opacity = offset === 0 ? 1 : 0.58;
       el.style.transform = `translate(-50%, -50%) translate3d(${x}%, 0px, ${z}px) scale(${scale})`;
       el.style.opacity = String(opacity);
     });
