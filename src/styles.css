@@ -40,6 +40,8 @@ html,
   --twiin-orange: 31 97% 56%;
   --muted: 0 0% 96%;
   --muted-foreground: 0 0% 45%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
   --accent: 263 70% 58%;
   --headline-gradient-purple: 263 60% 55%;
   --headline-gradient-pink: 330 80% 60%;
@@ -56,6 +58,8 @@ html,
   --color-ring-offset: hsl(var(--background));
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
 }
 
 /* ---- Keyframes from scraped site ---- */

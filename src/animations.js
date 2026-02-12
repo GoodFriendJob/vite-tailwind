@@ -73,23 +73,109 @@ export function initAnimations() {
     });
   }
 
-  // Section titles: fade in when in view
-  gsap.utils.toArray(".section-title").forEach((el) => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
-        toggleActions: "play none none none",
-      },
-      y: 24,
-      opacity: 0,
-      duration: 0.7,
-      ease: "power3.out",
-    });
-  });
+  // Section title boxes: slideInUp when section appears, slideOutDown when section disappears (all sections)
+  initSectionTitleEffects();
 
   // Philosophy section: scroll-driven 3D phone carousel (transform/appear on scroll)
   initPhilosophyPhones();
+
+  // Twiin embedded: typing animation when section scrolls into view
+  initTwiinEmbeddedTyping();
+
+  // Calculator: progress bars fill/unfill with scroll (scroll-driven)
+  initCalculatorProgressBars();
+}
+
+function initSectionTitleEffects() {
+  const titleBoxes = document.querySelectorAll(".section-title-box");
+  titleBoxes.forEach((titleBox) => {
+    const section = titleBox.closest("section");
+    if (!section) return;
+
+    const slideInUp = () => {
+      gsap.fromTo(
+        titleBox,
+        { y: 80, opacity: 0, scale: 0.88 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.95, ease: "power2.out", overwrite: true }
+      );
+    };
+    const slideOutDown = () => {
+      gsap.to(titleBox, {
+        y: 80,
+        opacity: 0,
+        scale: 0.88,
+        duration: 0.7,
+        ease: "power2.in",
+        overwrite: true,
+      });
+    };
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 80%",
+      end: "bottom 20%",
+      onEnter: slideInUp,
+      onLeaveBack: slideOutDown,
+      onLeave: slideOutDown,
+      onEnterBack: slideInUp,
+    });
+  });
+}
+
+function initCalculatorProgressBars() {
+  const block = document.getElementById("calculator");
+  const section = block?.querySelector("section");
+  const fills = block ? block.querySelectorAll(".calculator-progress-fill") : [];
+  if (!section || fills.length === 0) return;
+
+  // Progress 0→1 as section moves from just entering (bottom) to well in view (top 20%)
+  // Scroll down = fill %, scroll up = unfill %
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top bottom",
+    end: "top 20%",
+    scrub: 0.4,
+    onUpdate: (self) => {
+      const pct = Math.max(0, Math.min(100, self.progress * 100));
+      fills.forEach((el) => {
+        el.style.width = pct + "%";
+      });
+    },
+  });
+}
+
+function initTwiinEmbeddedTyping() {
+  const section = document.getElementById("twiin-embedded");
+  const el = document.getElementById("twiin-embedded-typing-text");
+  if (!section || !el) return;
+
+  const fullText = el.getAttribute("data-full-text") || "";
+  if (!fullText) return;
+
+  let typingTimer = null;
+
+  function runTyping() {
+    if (typingTimer) clearInterval(typingTimer);
+    el.textContent = "";
+    let i = 0;
+    const charDelay = 28;
+    typingTimer = setInterval(() => {
+      el.textContent = fullText.slice(0, i);
+      i += 1;
+      if (i > fullText.length) {
+        clearInterval(typingTimer);
+        typingTimer = null;
+      }
+    }, charDelay);
+  }
+
+  // Fire earlier: when section top is at 80% viewport (well before reaching boundary)
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 80%",
+    onEnter: runTyping,
+    onLeaveBack: runTyping,
+  });
 }
 
 function initPhilosophyPhones() {
