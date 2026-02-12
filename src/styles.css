@@ -28,24 +28,58 @@ html,
 
 /* ---- Twiin design tokens (hellotwiin.com: white bg, black text primary) ---- */
 :root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 9%;
-  --border: 0 0% 90%;
-  --primary: 263 70% 58%;
-  --ring: 263 70% 58%;
-  --twiin-pink: 330 80% 60%;
-  --twiin-violet: 263 60% 55%;
-  --twiin-blue: 217 90% 60%;
-  --twiin-magenta: 295 70% 55%;
-  --twiin-orange: 31 97% 56%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
+  --background: 216 12.1951% 83.9216%;
+  --foreground: 220 16% 10%;
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
-  --accent: 263 70% 58%;
-  --headline-gradient-purple: 263 60% 55%;
-  --headline-gradient-pink: 330 80% 60%;
-  --headline-gradient-light: 31 97% 56%;
+  --card-foreground: 220 16% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 16% 10%;
+  --primary: 217 19.1176% 26.6667%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 27.907% 16.8627%;
+  --secondary-foreground: 220 16% 10%;
+  --muted: 220 14% 96%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 215 19.3182% 34.5098%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 229 84% 4.902%;
+  --radius: 1.75rem;
+  --hero-gradient-start: 221 83% 53%;
+  --hero-gradient-end: 250 100% 65%;
+  --headline-gradient-purple: 221 55% 62%;
+  --headline-gradient-pink: 280 50% 68%;
+  --headline-gradient-light: 250 70% 74%;
+  --section-bg: 0 0% 99%;
+  --card-hover: 0 0% 98%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+  --transition-smooth: all .3s cubic-bezier(.4, 0, .2, 1);
+  --transition-gpu: transform .3s cubic-bezier(.4, 0, .2, 1), opacity .3s cubic-bezier(.4, 0, .2, 1);
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-serif: "Crimson Text", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+  --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --shadow-sm: 0px 1px 1.5px 0px hsla(0, 0%, 0%, .07);
+  --shadow: 0px 1px 3px 0px hsla(0, 0%, 0%, .07);
+  --shadow-md: 0px 1px 4.5px 0px hsla(0, 0%, 0%, .07);
+  --shadow-lg: 0px 1px 7.5px 0px hsla(0, 0%, 0%, .07);
+  --gradient-start: 221 83% 53%;
+  --gradient-mid: 250 100% 65%;
+  --gradient-end: 280 65% 65%;
+  --twiin-pink: 340 82% 65%;
+  --twiin-magenta: 300 76% 60%;
+  --twiin-violet: 270 70% 55%;
+  --twiin-blue: 217 91% 60%;
+  --twiin-orange: 25 95% 55%;
 }
 
 /* Tailwind v4: expose semantic tokens as theme colors (nav uses bg-background, text-foreground, etc.) */

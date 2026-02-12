@@ -1,17 +1,29 @@
 import "./styles.css";
 import Lenis from "@studio-freight/lenis";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { initAnimations } from "./animations.js";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const lenis = new Lenis({
   smoothWheel: true,
   duration: 1.1,
 });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+// Sync Lenis with GSAP ScrollTrigger so scroll-driven animations (e.g. calculator) work
+lenis.on("scroll", ScrollTrigger.update);
+// Make ScrollTrigger use Lenis scroll position (Lenis uses transform, so window.scrollY is not updated)
+ScrollTrigger.scrollerProxy(document.body, {
+  scrollTop(value) {
+    if (arguments.length) lenis.scrollTo(value);
+    return lenis.scroll;
+  },
+});
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+gsap.ticker.lagSmoothing(0);
 
 // Optional: expose for debugging
 window.lenis = lenis;
@@ -670,6 +682,29 @@ function initTestimonialsCarousel() {
   resetAutoTimer();
 }
 
+// FAQ accordion: toggle open/closed on trigger click
+function initFaqAccordion() {
+  const container = document.getElementById("faq-accordion");
+  if (!container) return;
+
+  container.querySelectorAll(".faq-trigger").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("aria-controls");
+      const content = id ? document.getElementById(id) : null;
+      const card = btn.closest("[data-state]");
+      if (!card || !content) return;
+
+      const isOpen = card.getAttribute("data-state") === "open";
+      const nextState = isOpen ? "closed" : "open";
+
+      card.setAttribute("data-state", nextState);
+      content.setAttribute("data-state", nextState);
+      btn.setAttribute("aria-expanded", nextState === "open" ? "true" : "false");
+      content.hidden = nextState === "closed";
+    });
+  });
+}
+
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
     initHireTyping();
@@ -677,6 +712,7 @@ if (document.readyState === "loading") {
     initPhysicalBridgeCarousel();
     initHowItWorksCarousel();
     initTestimonialsCarousel();
+    initFaqAccordion();
     initMobileMenu();
   });
 } else {
@@ -685,5 +721,6 @@ if (document.readyState === "loading") {
   initPhysicalBridgeCarousel();
   initHowItWorksCarousel();
   initTestimonialsCarousel();
+  initFaqAccordion();
   initMobileMenu();
 }

@@ -133,7 +133,7 @@ function initCalculatorProgressBars() {
 
   ScrollTrigger.create({
     trigger: section,
-    start: "top 90%",
+    start: "top 100%",
     end: "top 0%",
     scrub: 2.0,
     onUpdate: (self) => {
