@@ -214,6 +214,127 @@ function initUseCaseCarousel() {
   resetAutoTimer();
 }
 
+// Physical bridge carousel: 4 slides, finite, drag + dots (The world asks. Twiin answers.)
+function initPhysicalBridgeCarousel() {
+  const track = document.getElementById("physical-bridge-track");
+  const dotsContainer = document.getElementById("physical-bridge-dots");
+  if (!track || !dotsContainer) return;
+
+  const slides = track.querySelectorAll(".physical-bridge-slide");
+  const totalSlides = slides.length;
+  if (totalSlides === 0) return;
+
+  const AUTO_INTERVAL_MS = 5500;
+  let currentIndex = 0;
+  let slideWidthPx = 0;
+  let autoTimer = null;
+  let dragStartX = 0;
+  let dragBaseOffset = 0;
+  let isDragging = false;
+
+  function getSlideWidth() {
+    const w = slides[0]?.offsetWidth;
+    if (w) return w;
+    return track.offsetWidth;
+  }
+
+  function applyTransform(noTransition = false) {
+    slideWidthPx = getSlideWidth();
+    const offset = -currentIndex * slideWidthPx;
+    track.style.transition = noTransition ? "none" : "transform 700ms cubic-bezier(0.23, 1, 0.32, 1)";
+    track.style.transform = `translate3d(${offset}px, 0, 0)`;
+    if (noTransition) {
+      requestAnimationFrame(() => {
+        track.offsetHeight;
+        track.style.transition = "transform 700ms cubic-bezier(0.23, 1, 0.32, 1)";
+      });
+    }
+  }
+
+  function updateDots() {
+    dotsContainer.querySelectorAll(".physical-bridge-dot").forEach((btn, i) => {
+      const inner = btn.querySelector(".physical-bridge-dot-inner");
+      if (!inner) return;
+      const isActive = i === currentIndex;
+      inner.style.width = isActive ? "1.5rem" : "0.5rem";
+      inner.style.height = "0.5rem";
+      inner.style.background = isActive ? "white" : "rgba(255,255,255,0.4)";
+    });
+  }
+
+  function goTo(index) {
+    currentIndex = Math.max(0, Math.min(index, totalSlides - 1));
+    applyTransform(false);
+    updateDots();
+  }
+
+  function next() {
+    goTo(currentIndex === totalSlides - 1 ? 0 : currentIndex + 1);
+  }
+
+  function getPointerX(e) {
+    return e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+  }
+
+  track.addEventListener("pointerdown", (e) => {
+    if (e.button !== 0 && e.pointerType === "mouse") return;
+    isDragging = true;
+    dragStartX = getPointerX(e);
+    slideWidthPx = getSlideWidth();
+    dragBaseOffset = -currentIndex * slideWidthPx;
+    track.style.transition = "none";
+    track.setPointerCapture(e.pointerId);
+    track.classList.add("carousel-dragging");
+  });
+
+  track.addEventListener("pointermove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = getPointerX(e);
+    const delta = x - dragStartX;
+    track.style.transform = `translate3d(${dragBaseOffset + delta}px, 0, 0)`;
+  });
+
+  function pointerEnd(e) {
+    if (!isDragging) return;
+    track.releasePointerCapture(e.pointerId);
+    isDragging = false;
+    track.classList.remove("carousel-dragging");
+    const x = getPointerX(e);
+    const delta = x - dragStartX;
+    const threshold = Math.min(60, slideWidthPx * 0.2);
+    if (delta > threshold) goTo(currentIndex - 1);
+    else if (delta < -threshold) goTo(currentIndex + 1);
+    else applyTransform(false);
+    track.style.transition = "transform 700ms cubic-bezier(0.23, 1, 0.32, 1)";
+    resetAutoTimer();
+  }
+
+  track.addEventListener("pointerup", pointerEnd);
+  track.addEventListener("pointercancel", pointerEnd);
+
+  dotsContainer.querySelectorAll(".physical-bridge-dot").forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      goTo(i);
+      resetAutoTimer();
+    });
+  });
+
+  function resetAutoTimer() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(next, AUTO_INTERVAL_MS);
+  }
+
+  window.addEventListener("resize", () => {
+    applyTransform(true);
+    updateDots();
+  });
+
+  applyTransform(true);
+  updateDots();
+  resetAutoTimer();
+}
+
 // Mobile menu: open/close overlay + slide-in drawer from left
 function initMobileMenu() {
   const btn = document.getElementById("mobile-menu-btn");
@@ -381,12 +502,14 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
     initHireTyping();
     initUseCaseCarousel();
+    initPhysicalBridgeCarousel();
     initHowItWorksCarousel();
     initMobileMenu();
   });
 } else {
   initHireTyping();
   initUseCaseCarousel();
+  initPhysicalBridgeCarousel();
   initHowItWorksCarousel();
   initMobileMenu();
 }

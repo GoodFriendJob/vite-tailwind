@@ -54,6 +54,8 @@ html,
   --color-primary: hsl(var(--primary));
   --color-ring: hsl(var(--ring));
   --color-ring-offset: hsl(var(--background));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
 }
 
 /* ---- Keyframes from scraped site ---- */
@@ -102,6 +104,15 @@ html,
 
 .animate-gradientBorderBlink {
   animation: gradientBorderBlink 2s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.3; filter: brightness(0.5); }
+}
+
+.animate-cursor-pulse {
+  animation: cursorPulse 1.2s ease-in-out infinite;
 }
 
 /* ---- Utility classes ---- */
@@ -154,7 +165,8 @@ html,
 }
 
 /* Use-case carousel: drag state (no page scroll, grabbing cursor) */
-#use-cases-track.carousel-dragging {
+#use-cases-track.carousel-dragging,
+#physical-bridge-track.carousel-dragging {
   touch-action: none;
   cursor: grabbing;
 }
