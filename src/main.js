@@ -682,17 +682,45 @@ function initTestimonialsCarousel() {
   resetAutoTimer();
 }
 
-// Top nav & mobile nav: smooth scroll to section when anchor link is clicked
+// Top nav & mobile nav: smooth scroll + active state (href="#section-id" = section id)
 function initSmoothNavScroll() {
-  const hashToId = { possibilities: "use-cases", why: "philosophy", how: "how-it-works", "at-work": "hire-section", impact: "calculator", products: "pricing", answers: "faq" };
+  const sectionIdsInOrder = ["use-cases", "philosophy", "how-it-works", "physical-bridge", "calculator", "pricing", "faq"];
+  const ACTIVE_OFFSET = 120;
+
+  function getCurrentSectionId() {
+    for (let i = sectionIdsInOrder.length - 1; i >= 0; i--) {
+      const el = document.getElementById(sectionIdsInOrder[i]);
+      if (!el) continue;
+      const top = el.getBoundingClientRect().top;
+      if (top <= ACTIVE_OFFSET) return sectionIdsInOrder[i];
+    }
+    return null;
+  }
+
+  function updateActiveNav() {
+    const currentId = getCurrentSectionId();
+    const navLinks = document.querySelectorAll('nav a[href^="#"], #mobile-menu-drawer a[href^="#"]');
+    navLinks.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      if (href === "#" || !href.startsWith("#")) return;
+      const sectionId = href.slice(1);
+      const isActive = currentId !== null && sectionId === currentId;
+      link.classList.toggle("nav-link-active", isActive);
+      link.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  }
 
   function handleAnchorClick(e) {
     const a = e.currentTarget;
     const href = a.getAttribute("href") || "";
-    if (href === "#" || !href.startsWith("#")) return;
-    const hash = href.slice(1);
-    const targetId = hashToId[hash] || hash;
-    const target = document.getElementById(targetId);
+    if (href === "#") {
+      e.preventDefault();
+      lenis.scrollTo(0, { duration: 1.2 });
+      return;
+    }
+    if (!href.startsWith("#")) return;
+    const sectionId = href.slice(1);
+    const target = document.getElementById(sectionId);
     if (!target) return;
     e.preventDefault();
     lenis.scrollTo(target, { duration: 1.2 });
@@ -700,6 +728,9 @@ function initSmoothNavScroll() {
 
   const navLinks = document.querySelectorAll('nav a[href^="#"], #mobile-menu-drawer a[href^="#"]');
   navLinks.forEach((link) => link.addEventListener("click", handleAnchorClick));
+
+  lenis.on("scroll", updateActiveNav);
+  updateActiveNav();
 }
 
 // FAQ accordion: toggle open/closed on trigger click
